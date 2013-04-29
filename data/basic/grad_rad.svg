@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<!--grad_rad.svg:
+  - Demo of radial gradients. Based on Example 7-14 from "SVG Essentials" (Eisenberg, 2002)
+  -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="640" height="360" viewBox="0 0 320 180">
+  
+  <defs>
+  <!--We're borrowing the linearGradient from grad_lin.svg to use as a superclass. 
+    -->
+  <linearGradient id="partial"
+    x1="0.20" y1="0.30" x2="0.40" y2="0.80">
+	<stop offset="0.00" style="stop-color:#fff" />
+	<stop offset="0.33" style="stop-color:#c69" />
+	<stop offset="1.00" style="stop-color:#000" />
+  </linearGradient>
+  <!--For these radialGradient elms we'll use "#partial" as a prototype, but since
+    - they are of a different type, "#partial" is actually serving as an interface
+	- that will be exented with entirely different kinds of attributes. This technique is useful
+	- because the child properties (color stops) remain the same. 
+	-->
+  <radialGradient id="padded" xlink:href="#partial" 
+    cx="0.20" cy="0.30" r="0.50"
+    spreadMethod="pad"/>
+  <radialGradient id="repeated" xlink:href="#partial" 
+    cx="0.20" cy="0.30" r="0.50"
+    spreadMethod="repeat" />
+  <radialGradient id="reflected" xlink:href="#partial" 
+    cx="0.20" cy="0.30" r="0.50"
+    spreadMethod="reflect" />
+
+  <circle id="show-radius" cx="20" cy="30" r="50" style="stroke:#fff;fill:none;" />
+  </defs>
+  
+  <clipPath id="clipper">
+    <rect x="0" y="0" width="100" height="100" />
+  </clipPath>
+
+  <circle cx="55" cy="90" r="50"
+    style="fill:url(#padded)" />
+  <use xlink:href="#show-radius" transform="translate(5,40)" 
+     style="clip-path:url(#clipper)" />
+  
+  <circle cx="160" cy="90" r="50"
+    style="fill:url(#repeated)" />
+  <use xlink:href="#show-radius" transform="translate(110,40)" 
+     style="clip-path:url(#clipper)" />
+  
+  <circle cx="265" cy="90" r="50"
+    style="fill:url(#reflected)" />
+  <use xlink:href="#show-radius" transform="translate(215,40)"  
+     style="clip-path:url(#clipper)"/>
+
+</svg>

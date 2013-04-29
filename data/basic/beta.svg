@@ -1,0 +1,77 @@
+﻿<?xml version="1.0"?>
+<!--beta.svg:
+  - This is an SVG doc with a viewport and some basic content
+  -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
+	width="640" height="360">
+  <title>Beta SVG</title>
+  <desc>Basic elements and styles in an SVG document</desc>
+  
+  <style type="text/css">/*<![CDATA[*/
+    * {
+	  stroke: #000;
+	  stroke-opacity: 0.5;
+	  fill:none;
+	  fill-opacity: 1.0;
+	}
+	
+    line {
+	  stroke-width: 2;
+	}
+	
+	rect {
+	  fill: #F90;
+	}
+	
+	rect + rect {
+	  fill: none;
+	}
+	
+	rect + rect + rect {
+	  stroke-width: 10;
+	}
+	
+	circle {
+	  fill: #00F;
+	}
+	
+	ellipse {
+	  fill-opacity: 0.5;
+	  fill: #0F0;
+	}
+	
+	ellipse + ellipse {
+	  fill-opacity: 1.0;
+	  fill: #0FF;
+	}
+	
+	polygon {
+	  fill: #F00;
+	}
+	
+  /*]]>*/</style>
+  
+  <line x1="0" y1="180" x2="640" y2="180" />
+  
+  <rect x="0" y="0" width="144" height="144" />
+  <rect x="0" y="0" width="72" height="72" />
+  
+  <rect x="0" y="0" width="640" height="360" rx="72" ry="72" />
+  
+  <circle cx="480" cy="90" r="30" />
+  
+  <ellipse cx="480" cy="90" rx="90" ry="60" />
+  <ellipse cx="480" cy="270" rx="90" ry="60" />
+  
+  <polygon points=" 135, 237.5
+					137.9, 246.1
+					146.9, 246.1
+					139.7, 251.5
+					142.3, 260.1
+					135, 255
+					127.7, 260.1
+					130.3, 251.5
+					123.1, 246.1
+					132.1, 246.1" />
+</svg>

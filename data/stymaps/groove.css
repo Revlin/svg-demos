@@ -1,0 +1,13 @@
+/* CSS stylesheet for groove.svg */
+
+rect {
+	fill:			none;
+	stroke:			#000;
+	stroke-width:	40%;
+}
+
+rect + rect {
+	fill:			none;
+	stroke:			#999;
+	stroke-width:	20%;
+}

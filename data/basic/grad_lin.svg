@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<!--grad_lin.svg:
+  - Demo of linear gradients. Based on Example 7-10 from "SVG Essentials" (Eisenberg, 2002)
+  -->
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="640" height="360" viewBox="0 0 320 180">
+  
+  <defs>
+  <!--We're using the first linearGradient as a superclass or prototype for the rest. 
+    -->
+  <linearGradient id="partial"
+    x1="0.20" y1="0.30" x2="0.40" y2="0.80">
+	<stop offset="0.00" style="stop-color:#fc0" />
+	<stop offset="0.33" style="stop-color:#c69" />
+	<stop offset="1.00" style="stop-color:#6c9" />
+  </linearGradient>
+  <!--The remaining gradients will inherit the child properties of #partial, but they
+    - will need to have their own (uninherited) attributes.
+	-->
+  <linearGradient id="padded" xlink:href="#partial" 
+    x1="0.20" y1="0.30" x2="0.40" y2="0.80"
+    spreadMethod="pad"/>
+  <linearGradient id="repeated" xlink:href="#partial" 
+    x1="0.20" y1="0.30" x2="0.40" y2="0.80" 
+    spreadMethod="repeat" />
+  <linearGradient id="reflected" xlink:href="#partial" 
+    x1="0.20" y1="0.30" x2="0.40" y2="0.80"
+    spreadMethod="reflect" />
+
+  <line id="show-line" x1="20" y1="30" x2="40" y2="80" style="stroke:#fff" />
+  </defs>
+
+  <rect x="5" y="40" width="100" height="100"
+    style="fill:url(#padded)" />
+  <use xlink:href="#show-line" transform="translate(5,40)" />
+  
+  <rect x="110" y="40" width="100" height="100"
+    style="fill:url(#repeated)" />
+  <use xlink:href="#show-line" transform="translate(110,40)" />
+  
+  <rect x="215" y="40" width="100" height="100"
+    style="fill:url(#reflected)" />
+  <use xlink:href="#show-line" transform="translate(215,40)" />
+
+</svg>
