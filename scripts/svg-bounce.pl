@@ -1,10 +1,10 @@
 #!/usr/local/bin/perl
-# The bouncing ball
+# You may need to change the above path to perl
 use strict;
 use warnings;
 
+# The bouncing ball
 use XML::Writer;
-
 use constant DATA => '../data/';
 
 sub makeBouncePath( $ $ $ $ );
