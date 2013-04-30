@@ -7,7 +7,7 @@ use warnings;
 use XML::Writer;
 use constant DATA => '../data/';
 
-sub makeBouncePath( $ $ $ $ );
+require "svg-common.pl";
 
 my $svgFile;
 open $svgFile, '> '.DATA.'svg-bounce.svg';
@@ -79,12 +79,15 @@ $writer->startTag(
 	$writer->startTag(
 		'ellipse',
 		id => 'ball',
+		cx => 0,
+		cy => 0,
 		rx => $rx,
 		ry => $rx,
 		fill => 'url(#padded)',
 	);
 	
-		makeBouncePath(300, 200, 4, \$bounce_path);
+		makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path);
+		# \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional)
 
 	$writer->endTag('ellipse');
 	
@@ -94,66 +97,22 @@ $writer->startTag(
 		d => $bounce_path,
 		fill => 'none',
 		stroke => '#0000FF',
-	);
+	) if( $bounce_path );
 
 	$writer->startTag(
 		'text',
 		x => ($width - 100),
 		y => ($height - 10),
 		fill => '#0000FF',
+		'font-family' => 'monospace',
+		'font-size' => '16pt',
 	);
-		print $svgFile "\n\t\tTIME ->\n";
+		print $svgFile <<TEXT;
+			
+		time>>
+TEXT
 	$writer->endTag('text');
 	
 $writer->endTag('svg');
 
 close $svgFile;
-
-sub makeBouncePath( $ $ $ $ ) {
-	my ($ground, $bounce_height, $bounces, $dref) = @_;
-	my $begin = '0s';
-	my $from = $rx;
-	my $to = $rx;
-	my $pi = atan2(1,1) * 4;
-	$dx = $bounces if( $dx > $bounces );
-	my $sx = ($width*0.1);
-	my $x = $sx;
-	my $y = int( 1 + $ground - abs($bounce_height * sin( ($x/($width*2/$bounces)) * 2 * $pi )) );
-	my $points = "M $sx $y";
-	$$dref = $points;
-	
-	for( my $n=$width; $x<$n; $x+=$bounces, $sx+=$dx ) {
-		my $animid = "anim$x";
-		 if( $y > 265 ) { 
-			$to = $rx+$rx*((($y-10)*($y-10))*0.001/($height));
-		} else {
-			$to = $rx;
-		}
-		$y = int( ($ground+$x/$n*50) - abs($bounce_height * sin( ($x/($n*2/$bounces)) * 2 * $pi )) );
-		unless( $points =~ /M\s\d+\s$y/ ) {
-			$writer->emptyTag(
-				'animateMotion',
-				id => $animid,
-				path => $points. " L $sx $y",
-				begin => $begin,
-				dur => $dur.'s',
-				fill => 'freeze',
-			);
-			$writer->emptyTag(
-				'set',
-				attributeName => 'rx',
-				from => $from,
-				to => $to,
-				begin => $begin,
-				dur => $dur.'s',
-				fill => 'freeze',
-			);
-			$begin = $animid.'.end';
-			$$dref .= " L $x $y";
-			$from = $to;
-		}
-		$points = "M $sx $y";
-		$ground -= 40 / ($n/$bounces);
-		$height -= 40 / ($n/$bounces);
-	}
-}
