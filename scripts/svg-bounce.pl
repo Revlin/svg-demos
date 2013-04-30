@@ -11,8 +11,10 @@ sub makeBouncePath( $ $ $ $ );
 
 my $svgFile;
 open $svgFile, '> '.DATA.'svg-bounce.svg';
-print $svgFile '<?xml version="1.0"?>'."\n\n";
 my $writer = XML::Writer->new( OUTPUT => $svgFile );
+$writer->setDataMode(1);	# Auto insert newlines
+$writer->setDataIndent(2);	# Auto indent
+$writer->xmlDecl("utf-8"); 	# XML declaration: <?xml version="1.0" encoding="utf-8"?>
 
 my ($width, $height) = (640, 360);
 my $grad = 'padded';
@@ -21,8 +23,6 @@ my $dx = 0;
 my $dur = 0.025;
 my $bounce_path;
 
-$writer->setDataMode(1);	# Auto insert newlines
-$writer->setDataIndent(2);	# Auto indent
 
 $writer->startTag(	
 	'svg',

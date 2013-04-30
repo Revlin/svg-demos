@@ -10,9 +10,9 @@ use constant DATA => '../data/';
 my $svgFile;
 open $svgFile, '> '.DATA.'svg-twirl.svg';
 my $writer = XML::Writer->new( OUTPUT => $svgFile );
-$writer->setDataMode(1);
-$writer->setDataIndent(2);
-print $svgFile '<?xml version="1.0"?>'."\n\n";
+$writer->setDataMode(1);	# Auto insert newlines
+$writer->setDataIndent(2);	# Auto indent
+$writer->xmlDecl("utf-8"); 	# XML declaration: <?xml version="1.0" encoding="utf-8"?>
 
 my ($width, $height) = (640, 360);
 
