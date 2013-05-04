@@ -8,7 +8,8 @@ use XML::Writer;
 use constant DATA => '../data/';
 
 my $svgFile;
-open $svgFile, '> '.DATA.'svg-twirl.svg';
+my $svgDir = $ARGV[0] || DATA;
+open $svgFile, '> '.$svgDir.'svg-twirl.svg';
 my $writer = XML::Writer->new( OUTPUT => $svgFile );
 $writer->setDataMode(1);	# Auto insert newlines
 $writer->setDataIndent(2);	# Auto indent

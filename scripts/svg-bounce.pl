@@ -10,7 +10,8 @@ use constant DATA => '../data/';
 require "svg-common.pl";
 
 my $svgFile;
-open $svgFile, '> '.DATA.'svg-bounce.svg';
+my $svgDir = $ARGV[0] || DATA;
+open $svgFile, '> '.$svgDir.'svg-bounce.svg';
 my $writer = XML::Writer->new( OUTPUT => $svgFile );
 $writer->setDataMode(1);	# Auto insert newlines
 $writer->setDataIndent(2);	# Auto indent
