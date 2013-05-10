@@ -5,7 +5,12 @@ use strict;
 
 # Twirling squares with JavaScript
 use XML::Writer;
-use constant DATA => '../data/';
+use constant CWD => ($0 =~ /(.+)svg-twirl\.pl/ );
+use constant DATA => CWD.'../data/';
+use constant STYLE => CWD.'../styles/';
+
+my $COMMON = CWD."svg-common.pl";
+require $COMMON;
 
 my $svgFile;
 my $svgDir = $ARGV[0] || DATA;
@@ -139,5 +144,3 @@ SCRIPT
 	$writer->endTag('svg');
 
 $writer->endTag('svg');
-
-1;

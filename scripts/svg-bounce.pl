@@ -5,9 +5,12 @@ use warnings;
 
 # The bouncing ball
 use XML::Writer;
-use constant DATA => '../data/';
+use constant CWD => ($0 =~ /(.+)svg-bounce\.pl/ );
+use constant DATA => CWD.'../data/';
+use constant STYLE => CWD.'../styles/';
 
-require "svg-common.pl";
+my $COMMON = CWD."svg-common.pl";
+require $COMMON;
 
 my $svgFile;
 my $svgDir = $ARGV[0] || DATA;
