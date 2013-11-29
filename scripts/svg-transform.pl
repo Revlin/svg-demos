@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/bin/perl
 # You may need to change the above path to perl
 use strict;
 use warnings;
