@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+use utf8;
 use warnings;
 use strict;
 use feature ':5.14';

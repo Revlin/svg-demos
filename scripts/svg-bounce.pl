@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 # You may need to change the above path to perl
+use utf8;
 use strict;
 use warnings;
 
@@ -90,7 +91,7 @@ $writer->startTag(
 		fill => 'url(#padded)',
 	);
 	
-		makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path);
+		bounce::makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path);
 		# \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional)
 
 	$writer->endTag('ellipse');

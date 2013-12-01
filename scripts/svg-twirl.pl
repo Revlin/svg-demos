@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 # You may need to change the above path to perl
+use utf8;
 use warnings;
 use strict;
 
