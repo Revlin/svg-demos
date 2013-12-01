@@ -26,6 +26,7 @@ use XML::Writer;
 		$desc = $props->{'desc'} if ( $props->{'desc'} );
 		$writer = XML::Writer->new( OUTPUT => $svgFile );
 		$props = {
+			'class'		=> $self,
 			'writer'	=> $writer, 
 			'svgFile'	=> $svgFile, 
 			'width'		=> $width, 
@@ -84,6 +85,7 @@ use XML::Writer;
 }
 
 { package waveline;
+	@waveline::ISA = qw(scene);
 	
 	my( $name, $color, $position, $size, $smoothing, $dots, $thick, $mod, $mod_op );
 	$name = "a waveline instance";
@@ -98,7 +100,7 @@ use XML::Writer;
 		$thick = $props->{'thick'} if( $props->{'thick'} );
 		$dots = $props->{'dots'} if( $props->{'dots'} );
 		$props = { 
-			'scene'		=> $scene,
+			'class'		=> $self,
 			'name' 		=> $name,
 			'color' 	=> $color, 
 			'position'	=> $position, 
@@ -107,19 +109,26 @@ use XML::Writer;
 			'dots'		=> $dots, 
 			'thick'		=> $thick, 
 			'mod'		=> $mod, 
-			'mod_op'	=> $mod_op
+			'mod_op'	=> $mod_op,
+			'scene'		=> $scene,
+			# props inherited from scene
+			'writer'	=> $scene->{'writer'}, 
+			'svgFile'	=> $scene->{'svgFile'}, 
+			'width'		=> $scene->{'width'}, 
+			'height'	=> $scene->{'height'}, 
+			'title'		=> $scene->{'title'}, 
+			'desc'		=> $scene->{'desc'}
 		};
 		bless $props, "waveline";
-		$props->{'ISA'} = qw($scene);
 		return $props;
 	}
 	
 	sub draw( $ $ $ ); # args: $width_of_screen, $height_of_screen
 	sub draw( $ $ $ ) {
 		my( $self, $width, $height, $cycles ) = @_;
-		my ($class) =  $self =~ /(\w+)=/; 
+		my $class = $self->{'class'}; 
 		my $name = $self->{'name'};
-		my $writer = $self->{'scene'}->{'writer'};
+		my $writer = $self->{'writer'};
 		my $stroke = "rgb(".$self->{color}->[0].",".$self->{color}->[1].",".$self->{color}->[2].")";
 		my $thick = "2.0";
 		$thick = "4.0" if( $self->{thick} );
@@ -127,7 +136,7 @@ use XML::Writer;
 		$dash = "2 2" if( $self->{dots} );
 		$dash = "4 4" if( $self->{dots} && $self->{thick} );
 		$cycles = 16 if(! $cycles );
-		my $path = "M 0 ".($height/2)."	";
+		my $path = "M 0 ".($height/2)." ";
 		for( my $i=1; $i<$cycles; $i+=2 ) {
 			my $a = (($i-1)%4)? $height : 0;
 			$path = $path.
