@@ -13,7 +13,11 @@ use XML::Writer;
 	$svgFile = undef;
 	($width, $height) = (640, 360);
 	$title =  "Default Scene";
-	$desc = "Uni-Sol scene file";
+	$desc = <<SCENEDESC;
+
+Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin\@uni-sol.org) is licensed under the Creative Commons Attribution-ShareAlike 3.0 New Zealand License 2013(http://creativecommons.org/licenses/by-sa/3.0/nz/deed.en_GB) and further licesnsed under the Peer Production License(http://p2pfoundation.net/Peer_Production_License).
+
+SCENEDESC
 	
 	sub new( $ ) {
 		my( $self, $props ) = @_;
@@ -23,7 +27,7 @@ use XML::Writer;
 		$width = $props->{'width'} if ( $props->{'width'} );
 		$height = $props->{'height'} if ( $props->{'height'} );
 		$title = $props->{'title'} if ( $props->{'title'} );
-		$desc = $props->{'desc'} if ( $props->{'desc'} );
+		$desc = $desc . $props->{'desc'} if ( $props->{'desc'} );
 		$writer = XML::Writer->new( OUTPUT => $svgFile );
 		$props = {
 			'class'		=> $self,
@@ -50,7 +54,7 @@ use XML::Writer;
 		$writer->endTag('title');
 	
 		$writer->startTag('desc');
-			print $svgFile $desc;
+			print $svgFile $desc . "\n";
 		$writer->endTag('desc');
 		
 		$writer->emptyTag(
