@@ -18,11 +18,11 @@ require $COMMON;
 my $svgFILE;
 my ($data_dir)  = ( $ARGV[0] =~ /(.+\/$)/ );
 my ($style_dir) = STYLE;
-my ($xml, $xsl, $svg) = ( (join " ", @ARGV) =~ /([\w|\-]+\.xml)\s+(([\w|\-]+)\.xsl)/ );
-$svg = "${svg}.svg";
+my ($xml, $xsl) = ( (join " ", @ARGV) =~ /([\w|\-]+\.xml)\s+(([\w|\-]+)\.xsl)/ );
+my $svg = "xslt-transform.svg";
 $data_dir = DATA unless( $data_dir );
 unless( ($xml) && ($xsl) ) {
-	print 	"Must provide xml and stylesheet input!\n",
+	print 	"Must provide file names (not paths) of xml data and xsl stylesheet!\n",
 		"svg-transform.pl </.../DATA_DIR/> <file.xml> <file.xsl>\n";
 	exit;
 }
