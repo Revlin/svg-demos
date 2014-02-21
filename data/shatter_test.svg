@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg	
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="640"
+  height="360">
+	<title>Shatter Test</title>
+	<rect
+      style="fill:#0000ff; stroke:none"
+      height="100%"
+      width="100%"
+      y="0"
+      x="0" />
+	<g transform="translate(100,100)">
+		<rect
+		  style="fill:none; stroke:#ff0000; stroke-width: 2;px"
+		  x="0" 
+		  y="0"
+		  width="200"
+		  height="200" />
+	</g>
+</svg>

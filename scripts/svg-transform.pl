@@ -12,7 +12,7 @@ use constant CWD => ($0 =~ /(.+)svg-transform\.pl/ );
 use constant DATA => CWD.'../data/';
 use constant STYLE => CWD.'../styles/';
 
-my $COMMON = CWD."svg-common.pl";
+my $COMMON = CWD."common-svg.pl";
 require $COMMON;
 
 my $svgFILE;

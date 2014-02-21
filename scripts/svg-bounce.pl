@@ -10,12 +10,12 @@ use constant CWD => ($0 =~ /(.+)svg-bounce\.pl/ );
 use constant DATA => CWD.'../data/';
 use constant STYLE => CWD.'../styles/';
 
-my $COMMON = CWD."svg-common.pl";
+my $COMMON = CWD."common-svg.pl";
 require $COMMON;
 
 my $svgFile;
 my $svgDir = $ARGV[0] || DATA;
-open $svgFile, '> '.$svgDir.'svg-bounce.svg';
+open $svgFile, '> '.$svgDir.'bounce.svg';
 my $writer = XML::Writer->new( OUTPUT => $svgFile );
 $writer->setDataMode(1);	# Auto insert newlines
 $writer->setDataIndent(2);	# Auto indent

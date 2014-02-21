@@ -4,11 +4,11 @@ use strict;
 use warnings;
 
 # Draw the first Uni-Sol scene file
-use constant CWD => ($0 =~ /(.+)uni-sol-default-scene\.pl/ );
+use constant CWD => ($0 =~ /(.+)svg-default-scene\.pl/ );
 use constant DATA => CWD.'../data/';
 use constant STYLE => CWD.'../styles/';
 
-my $COMMON = CWD."svg-common.pl";
+my $COMMON = CWD."common-svg.pl";
 require $COMMON;
 
 my $svgFile;
