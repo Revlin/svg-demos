@@ -16,9 +16,9 @@ my $COMMON = CWD."common-svg.pl";
 require $COMMON;
 
 my $svgFILE;
-my ($data_dir)  = ( $ARGV[0] =~ /(.+\/$)/ );
-my ($style_dir) = STYLE;
-my ($xml, $xsl) = ( (join " ", @ARGV) =~ /([\w|\-]+\.xml)\s+(([\w|\-]+)\.xsl)/ );
+my( $data_dir )  = ( $ARGV[0] =~ /(.+\/$)/ );
+my( $style_dir ) = STYLE;
+my( $xml, $xsl ) = ( (join " ", @ARGV) =~ /([\w|\-]+\.xml)\s+(([\w|\-]+)\.xsl)/ );
 my $svg = "xslt-transform.svg";
 $data_dir = DATA unless( $data_dir );
 unless( ($xml) && ($xsl) ) {
