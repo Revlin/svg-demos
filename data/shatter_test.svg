@@ -7,13 +7,14 @@
   width="640"
   height="360">
 	<title>Shatter Test</title>
-	<rect
+	<rect id="layer1-background"
       style="fill:#0000ff; stroke:none"
       height="100%"
       width="100%"
       y="0"
       x="0" />
-	<g transform="translate(100,100)">
+	<g class="shatter-layer0"
+	   transform="translate(100,100)">
 		<rect
 		  style="fill:none; stroke:#ff0000; stroke-width: 2;px"
 		  x="0" 

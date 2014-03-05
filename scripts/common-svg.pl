@@ -231,4 +231,10 @@ SCENEDESC
 	
 }
 
+{ package shatter;
+# Subs to render multi-layered, masked fragments, that can be
+# animated to produce various crumble, explosion and shatter fx
+
+}
+
 1;
