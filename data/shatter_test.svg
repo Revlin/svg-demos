@@ -3,23 +3,117 @@
 
 <svg	
   xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
   width="640"
   height="360">
 	<title>Shatter Test</title>
-	<rect id="layer1-background"
+	<style type="text/css">
+	g path {
+		stroke-width: 	1px; 
+		stroke: 		#FFFFFF;
+		fill:			none;
+	}
+	</style>
+	<rect id="layer0001-background"
       style="fill:#0000ff; stroke:none"
       height="100%"
       width="100%"
       y="0"
       x="0" />
-	<g class="shatter-layer0"
+	
+	<g id="char-test"
+	   class="shatter-layer0"
 	   transform="translate(100,100)">
-		<rect
-		  style="fill:none; stroke:#ff0000; stroke-width: 2;px"
+		<defs>
+		<image id="char-test-shatter-img"
+		  xlink:href="images/char.png"
 		  x="0" 
 		  y="0"
 		  width="200"
-		  height="200" />
+		  height="200" /></defs> 
+		<rect
+		  style="fill:none; stroke:#ff0000; stroke-width:2px;"
+		  x="0" 
+		  y="0"
+		  width="200"
+		  height="200" /> 
+
+		<g class="shatter-layer0001"
+	   	  transform="translate(0,0)">
+			<clipPath id="char-test-shatter-layer0001-clip">
+				<path 
+				  d="M 0 0 L 40 0 L 40 40 L 0 40 Z" 
+				  transform="translate(0,0)" />
+			</clipPath>
+			<rect
+	   	  	  transform="translate(0,0)"
+		  	  style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0001-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" />
+			<use
+	   	  	  transform="translate(0,0)"
+		  	  xlink:href="#char-test-shatter-img"
+			  style="clip-path:url(#char-test-shatter-layer0001-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" /> 
+			<path d="M 0 0 L 40 0 L 40 40 L 0 40 Z" />
+		</g>
+	
+		<g class="shatter-layer0002"
+	   	  transform="translate(40,0)">
+			<clipPath id="char-test-shatter-layer0002-clip">
+				<path 
+				  d="M 0 0 L 80 0 L 80 40 L 0 40 Z" 
+				  transform="translate(40,0)" />
+			</clipPath>
+			<rect
+	   	  	  transform="translate(-40,0)"
+		  	  style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0002-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" />
+			<use
+	   	  	  transform="translate(-40,0)"
+		  	  xlink:href="#char-test-shatter-img"
+			  style="clip-path:url(#char-test-shatter-layer0002-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" /> 
+			<path d="M 0 0 L 80 0 L 80 40 L 0 40 Z" />
+		</g>
+	
+		<g class="shatter-layer0003"
+	   	  transform="translate(120,0)">
+			<clipPath id="char-test-shatter-layer0003-clip">
+				<path 
+				  d="M 0 0 L 80 0 L 80 40 L 0 40 Z" 
+				  transform="translate(120,0)" />
+			</clipPath>
+			<rect
+	   	  	  transform="translate(-120,0)"
+		  	  style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0003-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" />
+			<use
+	   	  	  transform="translate(-120,0)"
+		  	  xlink:href="#char-test-shatter-img"
+			  style="clip-path:url(#char-test-shatter-layer0003-clip);"
+		  	  x="0" 
+		  	  y="0"
+		  	  width="200"
+		  	  height="200" /> 
+			<path d="M 0 0 L 80 0 L 80 40 L 0 40 Z" />
+		</g>
+		
 	</g>
+	
 </svg>
