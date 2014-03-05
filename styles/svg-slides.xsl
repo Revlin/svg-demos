@@ -12,21 +12,29 @@
 	<xsl:template match="/">
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 		  width="640" height="360" onclick="rotateSlide();">
+		  
 		<xsl:comment>This series of slides was produced by the transformation stylesheet: svg-slides.xsl</xsl:comment> 
+		
 		<xsl:apply-templates />
+		
 	</svg>
 	</xsl:template>
 
 	<xsl:template match="CATALOG">
 	<xsl:comment>This is the title of our Catalog</xsl:comment>
+	
 	<title>PLANTS!</title>
+	
 	<rect x="0" y="0" width="100%" height="100%" fill="#000000" />
 	<text x="320" y="20" text-anchor="middle"
 	  font-family="sans-serif" font-size="24" fill="#00FF00">
 		PLANTS!
 	</text>
 	<xsl:comment>Imported SVG plant drawing as intro</xsl:comment>
+	
 	<use xlink:href="bloodroot.svg#path2311" x="0" y="20" stroke="#00FF00" />
+	
+	
 	<defs>
 		<g id="slide-0" /><xsl:apply-templates select="PLANT" />
 	</defs>
