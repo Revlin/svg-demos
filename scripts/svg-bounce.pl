@@ -114,10 +114,11 @@ $writer->startTag(
 	);
 		print $svgFile <<TEXT;
 			
-		time>>
+		time&gt;&gt;
 TEXT
 	$writer->endTag('text');
 	
 $writer->endTag('svg');
+print $svgFile "\n";
 
 close $svgFile;

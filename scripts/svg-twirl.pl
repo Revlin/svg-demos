@@ -145,3 +145,4 @@ SCRIPT
 	$writer->endTag('svg');
 
 $writer->endTag('svg');
+print $svgFile "\n";

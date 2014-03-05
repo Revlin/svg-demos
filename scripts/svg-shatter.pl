@@ -37,5 +37,6 @@ print $scene->desc, "\n";
 #	$first_wave->draw($width, $height, 24);
 	
 $scene->end();
+print $svgFile "\n";
 
 close $svgFile;

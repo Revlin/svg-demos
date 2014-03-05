@@ -41,5 +41,6 @@ my $result = $style->transform($source);
 open $svgFILE, '> '.$data_dir.$svg;
 
 print $svgFILE $style->output_as_bytes($result);
+print $svgFile "\n";
 
 close $svgFILE;
