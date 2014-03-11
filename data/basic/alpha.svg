@@ -3,7 +3,9 @@
   - This is the minimal tag set needed to produce a valid SVG document
   -->
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" 
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Alpha SVG</title>
   <desc>Minimal SVG document</desc>
 </svg>

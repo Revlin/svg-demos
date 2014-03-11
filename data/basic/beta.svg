@@ -1,9 +1,11 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <!--beta.svg:
   - This is an SVG doc with a viewport and some basic content
   -->
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" 
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
 	width="640" height="360">
   <title>Beta SVG</title>
   <desc>Basic elements and styles in an SVG document</desc>
