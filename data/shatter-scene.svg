@@ -2,10 +2,10 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="360" width="640">
   <title>Shatter Test</title>
-  <desc>
+  <desc>Creating and animating masked fragments
+
 Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is licensed under the Creative Commons Attribution-ShareAlike 3.0 New Zealand License 2013(http://creativecommons.org/licenses/by-sa/3.0/nz/deed.en_GB) and further licesnsed under the Peer Production License(http://p2pfoundation.net/Peer_Production_License).
 
-Creating and animating masked fragments
 </desc>
   <rect id="backdrop" x="0" y="0" width="640" height="360" style="stroke:none;fill:rgb(0, 0, 0)" />
 </svg>

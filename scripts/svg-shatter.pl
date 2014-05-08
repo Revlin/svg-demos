@@ -23,18 +23,10 @@ my $scene = scene->new( {
 		'width' => $width,
 		'height' => $height,
 		'title' => "Shatter Test",
-		'desc' => "Creating and animating masked fragments"
+		'desc' => "Creating and animating masked fragments\n"
 	} );
-print $scene->title, "\n";
-print $scene->desc, "\n";
-	
-#	my $first_wave = waveline->new( $scene, {
-#			'name' => "simple wave",
-#			'color' => [ 127, 127, 256 ],
-#			'dots' => 1
-#		} );
-#	print $first_wave->name, "\n";
-#	$first_wave->draw($width, $height, 24);
+print $scene->title, "\n"; 	# debug
+print $scene->desc, "\n";	# debug
 	
 $scene->end();
 print $svgFile "\n";

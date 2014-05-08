@@ -16,18 +16,19 @@ use XML::Writer;
 	$desc = <<SCENEDESC;
 
 Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin\@uni-sol.org) is licensed under the Creative Commons Attribution-ShareAlike 3.0 New Zealand License 2013(http://creativecommons.org/licenses/by-sa/3.0/nz/deed.en_GB) and further licesnsed under the Peer Production License(http://p2pfoundation.net/Peer_Production_License).
-
 SCENEDESC
 	
 	sub new( $ ) {
 		my( $self, $props ) = @_;
+		
 		my $svgFile = $props->{'svgFile'} if ( $props->{'svgFile'} );
 		die "scene->new() requires a filehandle assigned to scene->{svgFile}" if(! $svgFile );
+		
 		my( $writer, $width, $height, $title, $desc ) = ( $writer, $width, $height, $title, $desc );
 		$width = $props->{'width'} if ( $props->{'width'} );
 		$height = $props->{'height'} if ( $props->{'height'} );
 		$title = $props->{'title'} if ( $props->{'title'} );
-		$desc = $desc . $props->{'desc'} if ( $props->{'desc'} );
+		$desc =  $props->{'desc'} . $desc if ( $props->{'desc'} );
 		$writer = XML::Writer->new( OUTPUT => $svgFile );
 		$props = {
 			'class'		=> $self,
@@ -85,6 +86,12 @@ SCENEDESC
 		my $self = shift;
 		return $self->{'desc'};
 	}
+
+}
+
+{ package shatter;
+# Subs to render multi-layered, masked fragments, that can be
+# animated to produce various crumble, explosion and shatter fx
 
 }
 
@@ -229,12 +236,6 @@ SCENEDESC
 		}
 	}
 	
-}
-
-{ package shatter;
-# Subs to render multi-layered, masked fragments, that can be
-# animated to produce various crumble, explosion and shatter fx
-
 }
 
 1;
