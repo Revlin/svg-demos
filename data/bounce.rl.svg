@@ -9,7 +9,7 @@
   </radialGradient>
   <rect x="0" y="0" width="640" height="360" fill="#000000" />
   <ellipse id="ball" cx="0" cy="0" rx="30" ry="30" fill="url(#padded)">
-    <animateMotion id="anim50" path="M 50 127 L 50 135" begin="0s" dur="0.0375s" fill="freeze" />
+    <animateMotion id="anim50" path="M 50 127 L 50 135" begin="0s;anim299.end" dur="0.0375s" fill="freeze" />
     <set attributeName="rx" from="30" to="30" begin="0s" dur="0.0375s" fill="freeze" />
     <animateMotion id="anim54" path="M 50 135 L 50 154" begin="anim50.end" dur="0.0375s" fill="freeze" />
     <set attributeName="rx" from="30" to="30" begin="anim50.end" dur="0.0375s" fill="freeze" />
@@ -135,6 +135,7 @@
     <set attributeName="rx" from="30" to="30" begin="anim290.end" dur="0.0375s" fill="freeze" />
     <animateMotion id="anim298" path="M 50 266 L 50 299" begin="anim294.end" dur="0.0375s" fill="freeze" />
     <set attributeName="rx" from="30" to="37.4737762237763" begin="anim294.end" dur="0.0375s" fill="freeze" />
+    <animateMotion id="anim299" path="M 50 299 L 50 299" begin="anim298.end" dur="1s" fill="freeze" />
   </ellipse>
   <path id="bounce" d="M 50 127 L 116.666666666667 135 L 122 154 L 127.333333333333 177 L 132.666666666667 205 L 138 235 L 143.333333333333 267 L 148.666666666667 300 L 154 284 L 159.333333333333 251 L 164.666666666667 220 L 170 192 L 175.333333333333 166 L 180.666666666667 145 L 186 129 L 191.333333333333 117 L 196.666666666667 111 L 202 110 L 207.333333333333 115 L 212.666666666667 126 L 218 142 L 223.333333333333 162 L 228.666666666667 186 L 234 214 L 239.333333333333 245 L 244.666666666667 278 L 250 311 L 255.333333333333 278 L 260.666666666667 246 L 266 215 L 271.333333333333 187 L 276.666666666667 163 L 282 143 L 287.333333333333 128 L 292.666666666667 118 L 298 113 L 303.333333333333 114 L 308.666666666667 120 L 314 132 L 319.333333333333 149 L 324.666666666667 170 L 330 196 L 335.333333333333 224 L 340.666666666667 256 L 346 289 L 351.333333333333 305 L 356.666666666667 272 L 362 240 L 367.333333333333 210 L 372.666666666667 184 L 378 160 L 383.333333333333 141 L 388.666666666667 127 L 394 118 L 399.333333333333 115 L 404.666666666667 117 L 410 125 L 415.333333333333 138 L 420.666666666667 156 L 426 179 L 431.333333333333 205 L 436.666666666667 234 L 442 266 L 447.333333333333 299" fill="none" stroke="#0000FF" />
   <text x="540" y="350" fill="#0000FF" font-family="monospace" font-size="16pt">			

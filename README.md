@@ -8,7 +8,7 @@ Some examples:
 
 [Bounce ](http://www.uni-sol.org/svg-demos/data/bounce.svg)
 (procedurally generated animation path for a bouncing ball; hooray!)
-![Bouncing Ball](data/bounce.svg)
+![Bouncing Ball](data/bounce.rl.svg)
 
 [Botanical Slides ](http://www.uni-sol.org/svg-demos/data/xslt-transform.svg)
 (interactive /click & rotate/ slides, created with XSLT transformations of an XML catalog of plants into an animated SVG)

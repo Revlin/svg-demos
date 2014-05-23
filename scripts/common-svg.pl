@@ -189,7 +189,9 @@ SCENEDESC
 		# Create bouncing animation path for elliptical shape
 		my ($writer, $ttime, $ground, $bounce_height, $bounces, $rx, $sx, $dx, $dref) = @_;
 		$ttime = $ttime / 10;
-		my $begin = '0s';
+		my $fx = int(($ttime-$sx)/$bounces)*$bounces + $sx;
+		#print "Final x is $fx\n";
+		my $begin = "0s;bounce$fx.end";
 		my $from = $rx;
 		my $to = $rx;
 		my $pi = atan2(1,1) * 4;
@@ -200,14 +202,16 @@ SCENEDESC
 		$dx = $bounces if( $dx > $bounces );
 		$$dref = $points;
 		
-		for( my $n=$ttime; $x<$n; $x+=$bounces, $sx+=$dx ) {
-			my $animid = "anim$x";
-			 if( $y > $ground*0.98 ) { 
+		for( my $i=0, my $n=$ttime; $x<$n; $x+=$bounces, $sx+=$dx, $i++ ) {
+			my $animid = "bounce$x";
+			
+			if( $y > $ground*0.98 ) { 
 				$to = $rx + ($rx/4)*($y/$ground);
 			} else {
 				$to = $rx;
 			}
 			$y = int( ($ground+$x/$n*50) - abs($bounce_height * sin( ($x / (($n*2)/$bounces)) * (2*$pi) )) );
+			
 			unless( $points =~ /M\s\d+\s$y/ ) {
 				$$writer->emptyTag(
 					'animateMotion',
