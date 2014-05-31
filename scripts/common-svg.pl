@@ -89,12 +89,6 @@ SCENEDESC
 
 }
 
-{ package shatter;
-# Subs to render multi-layered, masked fragments, that can be
-# animated to produce various crumble, explosion and shatter fx
-
-}
-
 { package waveline;
 	@waveline::ISA = qw(scene);
 	
@@ -178,6 +172,13 @@ SCENEDESC
 		my $self = shift;
 		return $self->{'name'};
 	}
+}
+
+{ package shatter;
+# Subs to render multi-layered, masked fragments, that can be
+# animated to produce various crumble, explosion and shatter fx
+	@shatter::ISA = qw(scene);
+	
 }
 
 { package bounce;
