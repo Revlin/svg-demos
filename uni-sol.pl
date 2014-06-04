@@ -32,6 +32,11 @@ sub getSVGReadme {
 		$apppath
 	);
 	
+	($readme) = $readme =~ /(\w+)\//;
+	$log->debug( $readme ."\n" );
+	$mark2html = "\n<div class=\"$readme\">\n". $mark2html ."\n</div>\n";
+	$log->debug( $mark2html ."\n" );
+	
 	$self->stash( 
 		url => $URL,
 		version => $version,
