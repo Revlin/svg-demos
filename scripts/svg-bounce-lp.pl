@@ -6,7 +6,7 @@ use warnings;
 
 # The bouncing ball
 use XML::Writer;
-use constant CWD => ($0 =~ /(.+)svg-bounce\.pl/ );
+use constant CWD => ($0 =~ /(.+)svg-bounce-lp\.pl/ );
 use constant DATA => CWD.'../data/';
 use constant STYLE => CWD.'../styles/';
 
@@ -91,7 +91,7 @@ $writer->startTag(
 		fill => 'url(#padded)',
 	);
 	
-		bounce::makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path);
+		bounce::makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path, 1);
 		# \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional)
 
 	$writer->endTag('ellipse');

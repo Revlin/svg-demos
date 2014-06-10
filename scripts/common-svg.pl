@@ -188,16 +188,21 @@ SCENEDESC
 
 	sub makeBouncePath( $ $ $ $ $ $ $ $ $ ) {
 		# Create bouncing animation path for elliptical shape
-		my ($writer, $ttime, $ground, $bounce_height, $bounces, $rx, $sx, $dx, $dref) = @_;
+		my ($writer, $ttime, $ground, $bounce_height, $bounces, $rx, $sx, $dx, $dref, $loop) = @_;
 		$ttime = $ttime / 10;
+		my $begin = "0s";
 		my $fx = int(($ttime-$sx)/$bounces)*$bounces + $sx;
-		#print "Final x is $fx\n";
-		my $begin = "0s;bounce$fx.end";
+		if( $loop ){
+			print "Final x is $fx\n";
+		 	$begin = $begin .";bounce$fx.end";
+			print "$begin\n";
+		}
 		my $from = $rx;
 		my $to = $rx;
 		my $pi = atan2(1,1) * 4;
 		my $x = $sx;
-		my $y = int( 1 + $ground - abs($bounce_height * sin( ($x/($ttime*2/$bounces)) * 2 * $pi )) );
+		my $sy = int( 1 + $ground - abs($bounce_height * sin( ($x/($ttime*2/$bounces)) * 2 * $pi )) );
+		my $y = $sy;
 		my $points = "M $sx $y";
 		my $dur = 0.0005*$ttime / $bounces;
 		$dx = $bounces if( $dx > $bounces );
@@ -235,6 +240,27 @@ SCENEDESC
 				my $px = $x * 400/$ttime + $sx;
 				$$dref .= " L $px $y";
 				$from = $to;
+			}
+			if( $x == $fx ) {
+				$animid = "bounce".($x+1);
+				print "$animid\n";
+				$$writer->emptyTag(
+					'animateMotion',
+					id => $animid,
+					path => $points. " L $sx $sy",
+					begin => $begin,
+					dur => $dur.'s',
+					fill => 'freeze',
+				);
+				$$writer->emptyTag(
+					'set',
+					attributeName => 'rx',
+					from => $from,
+					to => $rx,
+					begin => $begin,
+					dur => '1s',
+					fill => 'freeze',
+				);
 			}
 			$points = "M $sx $y";
 			$ground -= 40 / ($n/$bounces);

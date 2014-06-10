@@ -9,8 +9,8 @@
   </radialGradient>
   <rect x="0" y="0" width="640" height="360" fill="#000000" />
   <ellipse id="ball" cx="0" cy="0" rx="30" ry="30" fill="url(#padded)">
-    <animateMotion id="bounce50" path="M 50 127 L 50 135" begin="0s;bounce298.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="0s;bounce298.end" dur="0.0375s" fill="freeze" />
+    <animateMotion id="bounce50" path="M 50 127 L 50 135" begin="0s" dur="0.0375s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="0s" dur="0.0375s" fill="freeze" />
     <animateMotion id="bounce54" path="M 50 135 L 50 154" begin="bounce50.end" dur="0.0375s" fill="freeze" />
     <set attributeName="rx" from="30" to="30" begin="bounce50.end" dur="0.0375s" fill="freeze" />
     <animateMotion id="bounce58" path="M 50 154 L 50 177" begin="bounce54.end" dur="0.0375s" fill="freeze" />
