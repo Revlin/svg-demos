@@ -1,6 +1,6 @@
-NAME=svg-edit
+NAME=release
 VERSION=2.6
-PACKAGE=$(NAME)-$(VERSION)
+PACKAGE=$(NAME)
 MAKEDOCS=naturaldocs/NaturalDocs
 CLOSURE=build/tools/closure-compiler.jar
 ZIP=zip
@@ -49,7 +49,7 @@ build/$(PACKAGE): $(COMPILED_JS)
 	-find build/$(PACKAGE) -name .svn -type d | xargs rm -rf {} \;
 
 	# Create the release version of the main HTML file.
-	build/tools/ship.py --i=editor/svg-editor.html --on=svg_edit_release > build/$(PACKAGE)/svg-editor.html
+	python build/tools/ship.py --i=editor/svg-editor.html --on=svg_edit_release > build/$(PACKAGE)/svg-editor.html
 
 # NOTE: Some files are not ready for the Closure compiler: (jquery)
 # NOTE: Our code safely compiles under SIMPLE_OPTIMIZATIONS

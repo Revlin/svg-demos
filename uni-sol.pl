@@ -41,7 +41,7 @@ sub getSVGReadme {
 		url => $URL,
 		version => $version,
 		mark2html => $mark2html,
-		svgApp => 'svg-demos/data/bounce.rl.svg'
+		svgApp => '/svg-demos/data/bounce.rl.svg'
 	);
 	$self->render('readme');
 };
