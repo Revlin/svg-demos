@@ -58,7 +58,7 @@ get '/svg-edit' => sub {
     ( $base_url, $port ) = $self->req->url->base =~ /(.*[\w|\-|\.]+)(\:\d+)?/;
 	getFrame($self, 
 		$base_url, $port, 
-		'/svg-demos/svg-edit/editor/svg-editor.html', 
+		'/svg-demos/svg-edit/build/release/svg-editor.html', 
 		'Uni:Sol :: svg-edit'
 	);
 };
