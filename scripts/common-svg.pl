@@ -29,19 +29,13 @@ SCENEDESC
 		$height = $props->{'height'} if ( $props->{'height'} );
 		$title = $props->{'title'} if ( $props->{'title'} );
 		$desc =  $props->{'desc'} . $desc if ( $props->{'desc'} );
+		
 		$writer = XML::Writer->new( OUTPUT => $svgFile );
-		$props = {
-			'class'		=> $self,
-			'writer'	=> $writer, 
-			'svgFile'	=> $svgFile, 
-			'width'		=> $width, 
-			'height'	=> $height, 
-			'title'		=> $title, 
-			'desc'		=> $desc
-		};
 		$writer->setDataMode(1);	# Auto insert newlines
 		$writer->setDataIndent(2);	# Auto indent
 		$writer->xmlDecl("utf-8"); 	# XML declaration: <?xml version="1.0" encoding="utf-8"?>
+		print $svgFile '<?xml-stylesheet type="text/css" href="'. $props->{'stylesheet'} .'" ?>' if( $props->{'stylesheet'} );
+		
 		$writer->startTag(	
 			'svg',
 			'xmlns' => 'http://www.w3.org/2000/svg',
@@ -68,6 +62,17 @@ SCENEDESC
 			'style' => "stroke:none;fill:rgb(0, 0, 0)"
 		);
 		
+		
+		$props = {
+			'class'		=> $self,
+			'writer'	=> $writer, 
+			'svgFile'	=> $svgFile, 
+			'width'		=> $width, 
+			'height'	=> $height, 
+			'title'		=> $title, 
+			'desc'		=> $desc
+		};
+		
 		bless $props, "scene";
 		return $props;
 	}
@@ -85,6 +90,20 @@ SCENEDESC
 	sub desc() {
 		my $self = shift;
 		return $self->{'desc'};
+	}
+	
+	sub width() {
+		my $self = shift;
+		return $self->{'width'};
+	}
+	sub height() {
+		my $self = shift;
+		return $self->{'height'};
+	}
+	
+	sub writer() {
+		my $self = shift;
+		return $self->{'writer'};
 	}
 
 }
@@ -208,7 +227,7 @@ SCENEDESC
 		$dx = $bounces if( $dx > $bounces );
 		$$dref = $points;
 		
-		for( my $i=0, my $n=$ttime; $x<$n; $x+=$bounces, $sx+=$dx, $i++ ) {
+		for( my $i=0; $x<$ttime; $x+=$bounces, $sx+=$dx, $i++ ) {
 			my $animid = "bounce$x";
 			
 			if( $y > $ground*0.98 ) { 
@@ -216,7 +235,7 @@ SCENEDESC
 			} else {
 				$to = $rx;
 			}
-			$y = int( ($ground + ($x/$n)*50) - abs($bounce_height * sin( ($x / (($n*2)/$bounces)) * (2*$pi) )) );
+			$y = int( ($ground + ($x/$ttime)*50) - abs($bounce_height * sin( (2*$pi) * ($x / (($ttime*2)/$bounces)) )) );
 			
 			unless( $points =~ /M\s\d+\s$y/ ) {
 				$$writer->emptyTag(
@@ -247,7 +266,7 @@ SCENEDESC
 				$from = $to;
 			}
 			$points = "M $sx $y";
-			$ground -= 40 / ($n/$bounces);
+			$ground -= 40 / ($ttime/$bounces);
 		}
 	}
 	

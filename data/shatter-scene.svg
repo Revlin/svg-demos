@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<?xml-stylesheet type="text/css" href="styles/shatter.css" ?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="360" width="640">
   <title>Shatter Test</title>
   <desc>Creating and animating masked fragments
@@ -8,4 +8,18 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
 
 </desc>
   <rect id="backdrop" x="0" y="0" width="640" height="360" style="stroke:none;fill:rgb(0, 0, 0)" />
+  <g id="char-test" class="shatter-layer0" transform="translate(100,100)">
+    <defs>
+      <image id="char-test-shatter-img" xlink:href="images/char.png" x="0" y="0" width="200" height="200" />
+    </defs>
+    <rect style="fill:none; stroke:#ff0000; stroke-width:2px;" x="0" y="0" width="200" height="200" />
+    <g class="shatter-layer0001" transform="translate(0,0)">
+      <clipPath id="char-test-shatter-layer0001-clip">
+        <path d="M 0 0 L 40 0 L 40 40 L 0 40 Z" transform="translate(0,0)" />
+      </clipPath>
+      <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0001-clip);" x="0" y="0" width="200" height="200" />
+      <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0001-clip);" x="0" y="0" width="200" height="200" />
+      <path d="M 0 0 L 40 0 L 40 40 L 0 40 Z" />
+    </g>
+  </g>
 </svg>
