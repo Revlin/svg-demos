@@ -9,136 +9,162 @@
   </radialGradient>
   <rect x="0" y="0" width="640" height="360" fill="#000000" />
   <ellipse id="ball" cx="0" cy="0" rx="30" ry="30" fill="url(#padded)">
-    <animateMotion id="bounce50" path="M 50 127 L 50 135" begin="0s;bounce298.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="0s;bounce298.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce54" path="M 50 135 L 50 154" begin="bounce50.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce50.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce58" path="M 50 154 L 50 177" begin="bounce54.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce54.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce62" path="M 50 177 L 50 205" begin="bounce58.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce58.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce66" path="M 50 205 L 50 235" begin="bounce62.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce62.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce70" path="M 50 235 L 50 267" begin="bounce66.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce66.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce74" path="M 50 267 L 50 300" begin="bounce70.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce70.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce78" path="M 50 300 L 50 284" begin="bounce74.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="37.5945094509451" begin="bounce74.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce82" path="M 50 284 L 50 251" begin="bounce78.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="37.5945094509451" to="30" begin="bounce78.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce86" path="M 50 251 L 50 220" begin="bounce82.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce82.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce90" path="M 50 220 L 50 192" begin="bounce86.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce86.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce94" path="M 50 192 L 50 166" begin="bounce90.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce90.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce98" path="M 50 166 L 50 145" begin="bounce94.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce94.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce102" path="M 50 145 L 50 129" begin="bounce98.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce98.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce106" path="M 50 129 L 50 117" begin="bounce102.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce102.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce110" path="M 50 117 L 50 111" begin="bounce106.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce106.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce114" path="M 50 111 L 50 110" begin="bounce110.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce110.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce118" path="M 50 110 L 50 115" begin="bounce114.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce114.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce122" path="M 50 115 L 50 126" begin="bounce118.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce118.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce126" path="M 50 126 L 50 142" begin="bounce122.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce122.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce130" path="M 50 142 L 50 162" begin="bounce126.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce126.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce134" path="M 50 162 L 50 186" begin="bounce130.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce130.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce138" path="M 50 186 L 50 214" begin="bounce134.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce134.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce142" path="M 50 214 L 50 245" begin="bounce138.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce138.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce146" path="M 50 245 L 50 278" begin="bounce142.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce142.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce150" path="M 50 278 L 50 311" begin="bounce146.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce146.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce154" path="M 50 311 L 50 278" begin="bounce150.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="38.1517940354147" begin="bounce150.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce158" path="M 50 278 L 50 246" begin="bounce154.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="38.1517940354147" to="30" begin="bounce154.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce162" path="M 50 246 L 50 215" begin="bounce158.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce158.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce166" path="M 50 215 L 50 187" begin="bounce162.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce162.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce170" path="M 50 187 L 50 163" begin="bounce166.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce166.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce174" path="M 50 163 L 50 143" begin="bounce170.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce170.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce178" path="M 50 143 L 50 128" begin="bounce174.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce174.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce182" path="M 50 128 L 50 118" begin="bounce178.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce178.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce186" path="M 50 118 L 50 113" begin="bounce182.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce182.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce190" path="M 50 113 L 50 114" begin="bounce186.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce186.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce194" path="M 50 114 L 50 120" begin="bounce190.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce190.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce198" path="M 50 120 L 50 132" begin="bounce194.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce194.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce202" path="M 50 132 L 50 149" begin="bounce198.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce198.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce206" path="M 50 149 L 50 170" begin="bounce202.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce202.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce210" path="M 50 170 L 50 196" begin="bounce206.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce206.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce214" path="M 50 196 L 50 224" begin="bounce210.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce210.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce218" path="M 50 224 L 50 256" begin="bounce214.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce214.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce222" path="M 50 256 L 50 289" begin="bounce218.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce218.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce226" path="M 50 289 L 50 305" begin="bounce222.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="37.8381147540984" begin="bounce222.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce230" path="M 50 305 L 50 272" begin="bounce226.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="37.8381147540984" to="38.2880434782609" begin="bounce226.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce234" path="M 50 272 L 50 240" begin="bounce230.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="38.2880434782609" to="37.405614714424" begin="bounce230.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce238" path="M 50 240 L 50 210" begin="bounce234.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="37.405614714424" to="30" begin="bounce234.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce242" path="M 50 210 L 50 184" begin="bounce238.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce238.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce246" path="M 50 184 L 50 160" begin="bounce242.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce242.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce250" path="M 50 160 L 50 141" begin="bounce246.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce246.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce254" path="M 50 141 L 50 127" begin="bounce250.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce250.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce258" path="M 50 127 L 50 118" begin="bounce254.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce254.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce262" path="M 50 118 L 50 115" begin="bounce258.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce258.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce266" path="M 50 115 L 50 117" begin="bounce262.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce262.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce270" path="M 50 117 L 50 125" begin="bounce266.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce266.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce274" path="M 50 125 L 50 138" begin="bounce270.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce270.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce278" path="M 50 138 L 50 156" begin="bounce274.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce274.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce282" path="M 50 156 L 50 179" begin="bounce278.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce278.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce286" path="M 50 179 L 50 205" begin="bounce282.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce282.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce290" path="M 50 205 L 50 234" begin="bounce286.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce286.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce294" path="M 50 234 L 50 266" begin="bounce290.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="30" begin="bounce290.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce298" path="M 50 266 L 50 299" begin="bounce294.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="30" to="37.4737762237763" begin="bounce294.end" dur="0.0375s" fill="freeze" />
-    <animateMotion id="bounce299" path="M 50 266 L 50 127" begin="bounce298.end" dur="0.0375s" fill="freeze" />
-    <set attributeName="rx" from="37.4737762237763" to="30" begin="bounce298.end" dur="1s" fill="freeze" />
+    <animateMotion id="bounce50" path="M 50 104 L 50 109" begin="0s" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="0s" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce54" path="M 50 109 L 50 116" begin="bounce50.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce50.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce58" path="M 50 116 L 50 127" begin="bounce54.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce54.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce62" path="M 50 127 L 50 141" begin="bounce58.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce58.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce66" path="M 50 141 L 50 158" begin="bounce62.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce62.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce70" path="M 50 158 L 50 178" begin="bounce66.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce66.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce74" path="M 50 178 L 50 201" begin="bounce70.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce70.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce78" path="M 50 201 L 50 226" begin="bounce74.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce74.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce82" path="M 50 226 L 50 252" begin="bounce78.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce78.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce86" path="M 50 252 L 50 280" begin="bounce82.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce82.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce90" path="M 50 280 L 50 308" begin="bounce86.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce86.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce94" path="M 50 308 L 50 280" begin="bounce90.end;bounce358.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="37.8275602409639" begin="bounce90.end;bounce358.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce98" path="M 50 280 L 50 253" begin="bounce94.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="37.8275602409639" to="30" begin="bounce94.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce102" path="M 50 253 L 50 227" begin="bounce98.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce98.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce106" path="M 50 227 L 50 202" begin="bounce102.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce102.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce110" path="M 50 202 L 50 180" begin="bounce106.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce106.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce114" path="M 50 180 L 50 160" begin="bounce110.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce110.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce118" path="M 50 160 L 50 143" begin="bounce114.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce114.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce122" path="M 50 143 L 50 129" begin="bounce118.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce118.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce126" path="M 50 129 L 50 118" begin="bounce122.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce122.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce130" path="M 50 118 L 50 112" begin="bounce126.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce126.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce134" path="M 50 112 L 50 109" begin="bounce130.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce130.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce138" path="M 50 109 L 50 110" begin="bounce134.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce134.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce142" path="M 50 110 L 50 115" begin="bounce138.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce138.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce146" path="M 50 115 L 50 124" begin="bounce142.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce142.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce150" path="M 50 124 L 50 136" begin="bounce146.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce146.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce154" path="M 50 136 L 50 152" begin="bounce150.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce150.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce158" path="M 50 152 L 50 171" begin="bounce154.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce154.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce162" path="M 50 171 L 50 192" begin="bounce158.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce158.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce166" path="M 50 192 L 50 216" begin="bounce162.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce162.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce170" path="M 50 216 L 50 241" begin="bounce166.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce166.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce174" path="M 50 241 L 50 268" begin="bounce170.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce170.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce178" path="M 50 268 L 50 296" begin="bounce174.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce174.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce186" path="M 50 296 L 50 269" begin="bounce178.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="37.792511700468" begin="bounce178.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce190" path="M 50 269 L 50 242" begin="bounce186.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="37.792511700468" to="30" begin="bounce186.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce194" path="M 50 242 L 50 217" begin="bounce190.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce190.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce198" path="M 50 217 L 50 193" begin="bounce194.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce194.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce202" path="M 50 193 L 50 172" begin="bounce198.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce198.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce206" path="M 50 172 L 50 153" begin="bounce202.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce202.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce210" path="M 50 153 L 50 138" begin="bounce206.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce206.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce214" path="M 50 138 L 50 126" begin="bounce210.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce210.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce218" path="M 50 126 L 50 117" begin="bounce214.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce214.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce222" path="M 50 117 L 50 112" begin="bounce218.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce218.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce226" path="M 50 112 L 50 111" begin="bounce222.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce222.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce230" path="M 50 111 L 50 114" begin="bounce226.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce226.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce234" path="M 50 114 L 50 121" begin="bounce230.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce230.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce238" path="M 50 121 L 50 132" begin="bounce234.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce234.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce242" path="M 50 132 L 50 146" begin="bounce238.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce238.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce246" path="M 50 146 L 50 163" begin="bounce242.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce242.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce250" path="M 50 163 L 50 183" begin="bounce246.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce246.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce254" path="M 50 183 L 50 206" begin="bounce250.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce250.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce258" path="M 50 206 L 50 231" begin="bounce254.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce254.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce262" path="M 50 231 L 50 257" begin="bounce258.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce258.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce266" path="M 50 257 L 50 285" begin="bounce262.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce262.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce270" path="M 50 285 L 50 313" begin="bounce266.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="37.7570564516129" begin="bounce266.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce274" path="M 50 313 L 50 285" begin="bounce270.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="37.7570564516129" to="38.532915993538" begin="bounce270.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce278" path="M 50 285 L 50 258" begin="bounce274.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="38.532915993538" to="37.7821601941748" begin="bounce274.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce282" path="M 50 258 L 50 232" begin="bounce278.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="37.7821601941748" to="30" begin="bounce278.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce286" path="M 50 232 L 50 207" begin="bounce282.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce282.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce290" path="M 50 207 L 50 185" begin="bounce286.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce286.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce294" path="M 50 185 L 50 165" begin="bounce290.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce290.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce298" path="M 50 165 L 50 148" begin="bounce294.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce294.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce302" path="M 50 148 L 50 134" begin="bounce298.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce298.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce306" path="M 50 134 L 50 123" begin="bounce302.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce302.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce310" path="M 50 123 L 50 117" begin="bounce306.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce306.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce314" path="M 50 117 L 50 114" begin="bounce310.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce310.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce318" path="M 50 114 L 50 115" begin="bounce314.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce314.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce322" path="M 50 115 L 50 120" begin="bounce318.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce318.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce326" path="M 50 120 L 50 129" begin="bounce322.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce322.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce330" path="M 50 129 L 50 141" begin="bounce326.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce326.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce334" path="M 50 141 L 50 157" begin="bounce330.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce330.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce338" path="M 50 157 L 50 176" begin="bounce334.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce334.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce342" path="M 50 176 L 50 197" begin="bounce338.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce338.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce346" path="M 50 197 L 50 221" begin="bounce342.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce342.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce350" path="M 50 221 L 50 246" begin="bounce346.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce346.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce354" path="M 50 246 L 50 273" begin="bounce350.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="30" begin="bounce350.end" dur="0.045s" fill="freeze" />
+    <animateMotion id="bounce358" path="M 50 273 L 50 301" begin="bounce354.end" dur="0.045s" fill="freeze" />
+    <set attributeName="rx" from="30" to="37.7038043478261" begin="bounce354.end" dur="0.045s" fill="freeze" />
   </ellipse>
-  <path id="bounce" d="M 50 127 L 116.666666666667 135 L 122 154 L 127.333333333333 177 L 132.666666666667 205 L 138 235 L 143.333333333333 267 L 148.666666666667 300 L 154 284 L 159.333333333333 251 L 164.666666666667 220 L 170 192 L 175.333333333333 166 L 180.666666666667 145 L 186 129 L 191.333333333333 117 L 196.666666666667 111 L 202 110 L 207.333333333333 115 L 212.666666666667 126 L 218 142 L 223.333333333333 162 L 228.666666666667 186 L 234 214 L 239.333333333333 245 L 244.666666666667 278 L 250 311 L 255.333333333333 278 L 260.666666666667 246 L 266 215 L 271.333333333333 187 L 276.666666666667 163 L 282 143 L 287.333333333333 128 L 292.666666666667 118 L 298 113 L 303.333333333333 114 L 308.666666666667 120 L 314 132 L 319.333333333333 149 L 324.666666666667 170 L 330 196 L 335.333333333333 224 L 340.666666666667 256 L 346 289 L 351.333333333333 305 L 356.666666666667 272 L 362 240 L 367.333333333333 210 L 372.666666666667 184 L 378 160 L 383.333333333333 141 L 388.666666666667 127 L 394 118 L 399.333333333333 115 L 404.666666666667 117 L 410 125 L 415.333333333333 138 L 420.666666666667 156 L 426 179 L 431.333333333333 205 L 436.666666666667 234 L 442 266 L 447.333333333333 299" fill="none" stroke="#0000FF" />
+  <path id="bounce" d="M 50 104 L 105.555555555556 109 L 110 116 L 114.444444444444 127 L 118.888888888889 141 L 123.333333333333 158 L 127.777777777778 178 L 132.222222222222 201 L 136.666666666667 226 L 141.111111111111 252 L 145.555555555556 280 L 150 308 L 154.444444444444 280 L 158.888888888889 253 L 163.333333333333 227 L 167.777777777778 202 L 172.222222222222 180 L 176.666666666667 160 L 181.111111111111 143 L 185.555555555556 129 L 190 118 L 194.444444444444 112 L 198.888888888889 109 L 203.333333333333 110 L 207.777777777778 115 L 212.222222222222 124 L 216.666666666667 136 L 221.111111111111 152 L 225.555555555556 171 L 230 192 L 234.444444444444 216 L 238.888888888889 241 L 243.333333333333 268 L 247.777777777778 296 L 256.666666666667 269 L 261.111111111111 242 L 265.555555555556 217 L 270 193 L 274.444444444444 172 L 278.888888888889 153 L 283.333333333333 138 L 287.777777777778 126 L 292.222222222222 117 L 296.666666666667 112 L 301.111111111111 111 L 305.555555555556 114 L 310 121 L 314.444444444444 132 L 318.888888888889 146 L 323.333333333333 163 L 327.777777777778 183 L 332.222222222222 206 L 336.666666666667 231 L 341.111111111111 257 L 345.555555555556 285 L 350 313 L 354.444444444444 285 L 358.888888888889 258 L 363.333333333333 232 L 367.777777777778 207 L 372.222222222222 185 L 376.666666666667 165 L 381.111111111111 148 L 385.555555555556 134 L 390 123 L 394.444444444444 117 L 398.888888888889 114 L 403.333333333333 115 L 407.777777777778 120 L 412.222222222222 129 L 416.666666666667 141 L 421.111111111111 157 L 425.555555555556 176 L 430 197 L 434.444444444444 221 L 438.888888888889 246 L 443.333333333333 273 L 447.777777777778 301" fill="none" stroke="#0000FF" />
   <text x="540" y="350" fill="#0000FF" font-family="monospace" font-size="16pt">			
 		time&gt;&gt;
 </text>

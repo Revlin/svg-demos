@@ -91,7 +91,7 @@ $writer->startTag(
 		fill => 'url(#padded)',
 	);
 	
-		bounce::makeBouncePath(\$writer, 3000, 300, 200, 4, $rx, 50, $dx, \$bounce_path, 1);
+		bounce::makeBouncePath(\$writer, 3600, 300, 200, 4, $rx, 50, $dx, \$bounce_path, 1);
 		# \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional)
 
 	$writer->endTag('ellipse');

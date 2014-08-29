@@ -27,7 +27,9 @@ my $scene = scene->new( {
 	} );
 print $scene->title, "\n"; 	# debug
 print $scene->desc, "\n";	# debug
-	
+
+#$scene->
+
 $scene->end();
 print $svgFile "\n";
 

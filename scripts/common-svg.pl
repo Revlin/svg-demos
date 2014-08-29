@@ -184,18 +184,18 @@ SCENEDESC
 { package bounce;
 # Subroutines used to define animations in svg-bounce
 
-	sub makeBouncePath( $ $ $ $ $ $ $ $ $ ); # args: \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional)
+	# args: \$ref_to_xml_writer, $total_time, $ground_height, $bounce_height, $number_of_bounces, $radius_of_ball, $x_offset, $delta_for_horizonatal_motion, \$ref_to_path (optional), \$loop (optional)
+	sub makeBouncePath( $ $ $ $ $ $ $ $ $ );
 
 	sub makeBouncePath( $ $ $ $ $ $ $ $ $ ) {
 		# Create bouncing animation path for elliptical shape
 		my ($writer, $ttime, $ground, $bounce_height, $bounces, $rx, $sx, $dx, $dref, $loop) = @_;
 		$ttime = $ttime / 10;
 		my $begin = "0s";
-		my $fx = int(($ttime-$sx)/$bounces)*$bounces + $sx;
-		if( $loop ){
-			print "Final x is $fx\n";
-		 	$begin = $begin .";bounce$fx.end";
-			print "$begin\n";
+		my $fx = int( ($ttime - $sx)/$bounces )*$bounces + $sx;
+		if( $loop ) {
+			print "First x is $fx\n";
+		 	print ";bounce$fx.end\n";
 		}
 		my $from = $rx;
 		my $to = $rx;
@@ -216,7 +216,7 @@ SCENEDESC
 			} else {
 				$to = $rx;
 			}
-			$y = int( ($ground+$x/$n*50) - abs($bounce_height * sin( ($x / (($n*2)/$bounces)) * (2*$pi) )) );
+			$y = int( ($ground + ($x/$n)*50) - abs($bounce_height * sin( ($x / (($n*2)/$bounces)) * (2*$pi) )) );
 			
 			unless( $points =~ /M\s\d+\s$y/ ) {
 				$$writer->emptyTag(
@@ -236,31 +236,15 @@ SCENEDESC
 					dur => $dur.'s',
 					fill => 'freeze',
 				);
-				$begin = $animid.'.end';
+				if( ($y > $ground) && ($loop) ) { 
+					$begin = $animid.".end;bounce$fx.end";
+					$loop = 0;
+				} else {
+					$begin = $animid.'.end';
+				}
 				my $px = $x * 400/$ttime + $sx;
 				$$dref .= " L $px $y";
 				$from = $to;
-			}
-			if( $x == $fx ) {
-				$animid = "bounce".($x+1);
-				print "$animid\n";
-				$$writer->emptyTag(
-					'animateMotion',
-					id => $animid,
-					path => $points. " L $sx $sy",
-					begin => $begin,
-					dur => $dur.'s',
-					fill => 'freeze',
-				);
-				$$writer->emptyTag(
-					'set',
-					attributeName => 'rx',
-					from => $from,
-					to => $rx,
-					begin => $begin,
-					dur => '1s',
-					fill => 'freeze',
-				);
 			}
 			$points = "M $sx $y";
 			$ground -= 40 / ($n/$bounces);
