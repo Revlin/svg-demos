@@ -20,6 +20,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0001-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0001-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 0 L 40 0 L 40 20 L 0 20 Z" />
+      <animateMotion id="0001-0" path="M 0 0 L -100 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0002" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0002-clip">
@@ -28,6 +29,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0002-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0002-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 40 0 L 60 0 L 60 20 L 40 20 Z" />
+      <animateMotion id="0002-0" path="M 0 0 L -20 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0003" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0003-clip">
@@ -36,6 +38,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0003-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0003-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 0 L 100 0 L 100 20 L 60 20 Z" />
+      <animateMotion id="0003-0" path="M 0 0 L 20 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0004" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0004-clip">
@@ -44,6 +47,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0004-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0004-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 100 0 L 120 0 L 120 20 L 100 20 Z" />
+      <animateMotion id="0004-0" path="M 0 0 L 100 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0005" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0005-clip">
@@ -52,6 +56,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0005-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0005-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 0 L 160 0 L 160 20 L 120 20 Z" />
+      <animateMotion id="0005-0" path="M 0 0 L 140 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0006" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0006-clip">
@@ -60,6 +65,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0006-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0006-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 160 0 L 180 0 L 180 20 L 160 20 Z" />
+      <animateMotion id="0006-0" path="M 0 0 L 220 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0007" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0007-clip">
@@ -68,6 +74,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0007-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0007-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 0 L 220 0 L 220 20 L 180 20 Z" />
+      <animateMotion id="0007-0" path="M 0 0 L 260 -100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0008" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0008-clip">
@@ -76,6 +83,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0008-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0008-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 20 L 20 20 L 20 40 L 0 40 Z" />
+      <animateMotion id="0008-0" path="M 0 0 L -100 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0009" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0009-clip">
@@ -84,6 +92,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0009-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0009-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 20 20 L 60 20 L 60 40 L 20 40 Z" />
+      <animateMotion id="0009-0" path="M 0 0 L -60 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0010" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0010-clip">
@@ -92,6 +101,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0010-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0010-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 20 L 80 20 L 80 40 L 60 40 Z" />
+      <animateMotion id="0010-0" path="M 0 0 L 20 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0011" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0011-clip">
@@ -100,6 +110,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0011-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0011-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 80 20 L 120 20 L 120 40 L 80 40 Z" />
+      <animateMotion id="0011-0" path="M 0 0 L 60 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0012" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0012-clip">
@@ -108,6 +119,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0012-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0012-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 20 L 140 20 L 140 40 L 120 40 Z" />
+      <animateMotion id="0012-0" path="M 0 0 L 140 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0013" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0013-clip">
@@ -116,6 +128,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0013-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0013-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 140 20 L 180 20 L 180 40 L 140 40 Z" />
+      <animateMotion id="0013-0" path="M 0 0 L 180 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0014" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0014-clip">
@@ -124,6 +137,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0014-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0014-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 20 L 200 20 L 200 40 L 180 40 Z" />
+      <animateMotion id="0014-0" path="M 0 0 L 260 -60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0015" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0015-clip">
@@ -132,6 +146,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0015-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0015-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 40 L 40 40 L 40 60 L 0 60 Z" />
+      <animateMotion id="0015-0" path="M 0 0 L -100 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0016" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0016-clip">
@@ -140,6 +155,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0016-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0016-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 40 40 L 60 40 L 60 60 L 40 60 Z" />
+      <animateMotion id="0016-0" path="M 0 0 L -20 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0017" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0017-clip">
@@ -148,6 +164,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0017-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0017-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 40 L 100 40 L 100 60 L 60 60 Z" />
+      <animateMotion id="0017-0" path="M 0 0 L 20 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0018" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0018-clip">
@@ -156,6 +173,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0018-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0018-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 100 40 L 120 40 L 120 60 L 100 60 Z" />
+      <animateMotion id="0018-0" path="M 0 0 L 100 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0019" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0019-clip">
@@ -164,6 +182,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0019-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0019-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 40 L 160 40 L 160 60 L 120 60 Z" />
+      <animateMotion id="0019-0" path="M 0 0 L 140 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0020" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0020-clip">
@@ -172,6 +191,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0020-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0020-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 160 40 L 180 40 L 180 60 L 160 60 Z" />
+      <animateMotion id="0020-0" path="M 0 0 L 220 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0021" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0021-clip">
@@ -180,6 +200,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0021-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0021-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 40 L 220 40 L 220 60 L 180 60 Z" />
+      <animateMotion id="0021-0" path="M 0 0 L 260 -20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0022" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0022-clip">
@@ -188,6 +209,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0022-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0022-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 60 L 20 60 L 20 80 L 0 80 Z" />
+      <animateMotion id="0022-0" path="M 0 0 L -100 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0023" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0023-clip">
@@ -196,6 +218,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0023-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0023-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 20 60 L 60 60 L 60 80 L 20 80 Z" />
+      <animateMotion id="0023-0" path="M 0 0 L -60 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0024" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0024-clip">
@@ -204,6 +227,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0024-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0024-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 60 L 80 60 L 80 80 L 60 80 Z" />
+      <animateMotion id="0024-0" path="M 0 0 L 20 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0025" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0025-clip">
@@ -212,6 +236,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0025-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0025-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 80 60 L 120 60 L 120 80 L 80 80 Z" />
+      <animateMotion id="0025-0" path="M 0 0 L 60 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0026" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0026-clip">
@@ -220,6 +245,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0026-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0026-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 60 L 140 60 L 140 80 L 120 80 Z" />
+      <animateMotion id="0026-0" path="M 0 0 L 140 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0027" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0027-clip">
@@ -228,6 +254,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0027-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0027-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 140 60 L 180 60 L 180 80 L 140 80 Z" />
+      <animateMotion id="0027-0" path="M 0 0 L 180 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0028" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0028-clip">
@@ -236,6 +263,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0028-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0028-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 60 L 200 60 L 200 80 L 180 80 Z" />
+      <animateMotion id="0028-0" path="M 0 0 L 260 20" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0029" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0029-clip">
@@ -244,6 +272,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0029-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0029-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 80 L 40 80 L 40 100 L 0 100 Z" />
+      <animateMotion id="0029-0" path="M 0 0 L -100 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0030" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0030-clip">
@@ -252,6 +281,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0030-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0030-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 40 80 L 60 80 L 60 100 L 40 100 Z" />
+      <animateMotion id="0030-0" path="M 0 0 L -20 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0031" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0031-clip">
@@ -260,6 +290,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0031-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0031-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 80 L 100 80 L 100 100 L 60 100 Z" />
+      <animateMotion id="0031-0" path="M 0 0 L 20 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0032" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0032-clip">
@@ -268,6 +299,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0032-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0032-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 100 80 L 120 80 L 120 100 L 100 100 Z" />
+      <animateMotion id="0032-0" path="M 0 0 L 100 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0033" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0033-clip">
@@ -276,6 +308,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0033-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0033-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 80 L 160 80 L 160 100 L 120 100 Z" />
+      <animateMotion id="0033-0" path="M 0 0 L 140 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0034" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0034-clip">
@@ -284,6 +317,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0034-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0034-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 160 80 L 180 80 L 180 100 L 160 100 Z" />
+      <animateMotion id="0034-0" path="M 0 0 L 220 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0035" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0035-clip">
@@ -292,6 +326,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0035-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0035-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 80 L 220 80 L 220 100 L 180 100 Z" />
+      <animateMotion id="0035-0" path="M 0 0 L 260 60" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0036" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0036-clip">
@@ -300,6 +335,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0036-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0036-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 100 L 20 100 L 20 120 L 0 120 Z" />
+      <animateMotion id="0036-0" path="M 0 0 L -100 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0037" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0037-clip">
@@ -308,6 +344,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0037-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0037-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 20 100 L 60 100 L 60 120 L 20 120 Z" />
+      <animateMotion id="0037-0" path="M 0 0 L -60 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0038" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0038-clip">
@@ -316,6 +353,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0038-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0038-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 100 L 80 100 L 80 120 L 60 120 Z" />
+      <animateMotion id="0038-0" path="M 0 0 L 20 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0039" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0039-clip">
@@ -324,6 +362,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0039-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0039-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 80 100 L 120 100 L 120 120 L 80 120 Z" />
+      <animateMotion id="0039-0" path="M 0 0 L 60 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0040" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0040-clip">
@@ -332,6 +371,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0040-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0040-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 100 L 140 100 L 140 120 L 120 120 Z" />
+      <animateMotion id="0040-0" path="M 0 0 L 140 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0041" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0041-clip">
@@ -340,6 +380,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0041-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0041-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 140 100 L 180 100 L 180 120 L 140 120 Z" />
+      <animateMotion id="0041-0" path="M 0 0 L 180 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0042" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0042-clip">
@@ -348,6 +389,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0042-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0042-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 100 L 200 100 L 200 120 L 180 120 Z" />
+      <animateMotion id="0042-0" path="M 0 0 L 260 100" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0043" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0043-clip">
@@ -356,6 +398,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0043-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0043-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 120 L 40 120 L 40 140 L 0 140 Z" />
+      <animateMotion id="0043-0" path="M 0 0 L -100 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0044" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0044-clip">
@@ -364,6 +407,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0044-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0044-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 40 120 L 60 120 L 60 140 L 40 140 Z" />
+      <animateMotion id="0044-0" path="M 0 0 L -20 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0045" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0045-clip">
@@ -372,6 +416,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0045-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0045-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 120 L 100 120 L 100 140 L 60 140 Z" />
+      <animateMotion id="0045-0" path="M 0 0 L 20 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0046" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0046-clip">
@@ -380,6 +425,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0046-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0046-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 100 120 L 120 120 L 120 140 L 100 140 Z" />
+      <animateMotion id="0046-0" path="M 0 0 L 100 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0047" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0047-clip">
@@ -388,6 +434,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0047-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0047-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 120 L 160 120 L 160 140 L 120 140 Z" />
+      <animateMotion id="0047-0" path="M 0 0 L 140 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0048" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0048-clip">
@@ -396,6 +443,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0048-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0048-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 160 120 L 180 120 L 180 140 L 160 140 Z" />
+      <animateMotion id="0048-0" path="M 0 0 L 220 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0049" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0049-clip">
@@ -404,6 +452,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0049-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0049-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 120 L 220 120 L 220 140 L 180 140 Z" />
+      <animateMotion id="0049-0" path="M 0 0 L 260 140" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0050" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0050-clip">
@@ -412,6 +461,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0050-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0050-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 140 L 20 140 L 20 160 L 0 160 Z" />
+      <animateMotion id="0050-0" path="M 0 0 L -100 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0051" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0051-clip">
@@ -420,6 +470,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0051-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0051-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 20 140 L 60 140 L 60 160 L 20 160 Z" />
+      <animateMotion id="0051-0" path="M 0 0 L -60 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0052" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0052-clip">
@@ -428,6 +479,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0052-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0052-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 140 L 80 140 L 80 160 L 60 160 Z" />
+      <animateMotion id="0052-0" path="M 0 0 L 20 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0053" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0053-clip">
@@ -436,6 +488,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0053-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0053-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 80 140 L 120 140 L 120 160 L 80 160 Z" />
+      <animateMotion id="0053-0" path="M 0 0 L 60 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0054" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0054-clip">
@@ -444,6 +497,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0054-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0054-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 140 L 140 140 L 140 160 L 120 160 Z" />
+      <animateMotion id="0054-0" path="M 0 0 L 140 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0055" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0055-clip">
@@ -452,6 +506,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0055-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0055-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 140 140 L 180 140 L 180 160 L 140 160 Z" />
+      <animateMotion id="0055-0" path="M 0 0 L 180 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0056" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0056-clip">
@@ -460,6 +515,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0056-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0056-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 140 L 200 140 L 200 160 L 180 160 Z" />
+      <animateMotion id="0056-0" path="M 0 0 L 260 180" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0057" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0057-clip">
@@ -468,6 +524,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0057-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0057-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 160 L 40 160 L 40 180 L 0 180 Z" />
+      <animateMotion id="0057-0" path="M 0 0 L -100 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0058" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0058-clip">
@@ -476,6 +533,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0058-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0058-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 40 160 L 60 160 L 60 180 L 40 180 Z" />
+      <animateMotion id="0058-0" path="M 0 0 L -20 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0059" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0059-clip">
@@ -484,6 +542,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0059-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0059-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 160 L 100 160 L 100 180 L 60 180 Z" />
+      <animateMotion id="0059-0" path="M 0 0 L 20 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0060" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0060-clip">
@@ -492,6 +551,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0060-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0060-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 100 160 L 120 160 L 120 180 L 100 180 Z" />
+      <animateMotion id="0060-0" path="M 0 0 L 100 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0061" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0061-clip">
@@ -500,6 +560,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0061-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0061-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 160 L 160 160 L 160 180 L 120 180 Z" />
+      <animateMotion id="0061-0" path="M 0 0 L 140 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0062" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0062-clip">
@@ -508,6 +569,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0062-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0062-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 160 160 L 180 160 L 180 180 L 160 180 Z" />
+      <animateMotion id="0062-0" path="M 0 0 L 220 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0063" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0063-clip">
@@ -516,6 +578,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0063-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0063-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 160 L 220 160 L 220 180 L 180 180 Z" />
+      <animateMotion id="0063-0" path="M 0 0 L 260 220" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0064" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0064-clip">
@@ -524,6 +587,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0064-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0064-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 0 180 L 20 180 L 20 200 L 0 200 Z" />
+      <animateMotion id="0064-0" path="M 0 0 L -100 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0065" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0065-clip">
@@ -532,6 +596,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0065-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0065-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 20 180 L 60 180 L 60 200 L 20 200 Z" />
+      <animateMotion id="0065-0" path="M 0 0 L -60 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0066" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0066-clip">
@@ -540,6 +605,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0066-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0066-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 60 180 L 80 180 L 80 200 L 60 200 Z" />
+      <animateMotion id="0066-0" path="M 0 0 L 20 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0067" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0067-clip">
@@ -548,6 +614,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0067-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0067-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 80 180 L 120 180 L 120 200 L 80 200 Z" />
+      <animateMotion id="0067-0" path="M 0 0 L 60 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0068" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0068-clip">
@@ -556,6 +623,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0068-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0068-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 120 180 L 140 180 L 140 200 L 120 200 Z" />
+      <animateMotion id="0068-0" path="M 0 0 L 140 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0069" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0069-clip">
@@ -564,6 +632,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0069-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0069-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 140 180 L 180 180 L 180 200 L 140 200 Z" />
+      <animateMotion id="0069-0" path="M 0 0 L 180 260" begin="0s" dur="10s" fill="freeze" />
     </g>
     <g class="shatter-layer0070" transform="translate(0,0)">
       <clipPath id="char-test-shatter-layer0070-clip">
@@ -572,6 +641,7 @@ Uni:Sol(http://uni-sol.org) by Revlin John(mailto:revlin@uni-sol.org) is license
       <rect transform="translate(0,0)" style="fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer0070-clip);" x="0" y="0" width="200" height="200" />
       <use transform="translate(0,0)" xlink:href="#char-test-shatter-img" style="clip-path:url(#char-test-shatter-layer0070-clip);" x="0" y="0" width="200" height="200" />
       <path d="M 180 180 L 200 180 L 200 200 L 180 200 Z" />
+      <animateMotion id="0070-0" path="M 0 0 L 260 260" begin="0s" dur="10s" fill="freeze" />
     </g>
   </g>
 </svg>

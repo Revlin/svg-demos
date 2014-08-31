@@ -85,7 +85,7 @@ print $scene->desc, "\n";	# debug
 						);
 					$scene->writer->endTag();
 					
-					$scene->writer->startTag( 'rect',
+					$scene->writer->emptyTag( 'rect',
 						transform => "translate(0,0)",
 						style => "fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer$layerId-clip);",
 						x => "0", 
@@ -93,7 +93,6 @@ print $scene->desc, "\n";	# debug
 						width => "$swidth",
 						height => "$sheight"
 					);
-					$scene->writer->endTag();
 					
 					$scene->writer->emptyTag( 'use',
 						transform => "translate(0,0)",
@@ -107,7 +106,27 @@ print $scene->desc, "\n";	# debug
 					$scene->writer->emptyTag( 'path',
 						#style => "stroke:none;",
 						d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z" 
-					);
+					);					
+					my $points = "M 0 0";
+						
+					for( my $i=0; $i < 1; $i++ ) {
+						my $animid = "$layerId-$i";
+						my $begin = 0;
+						my $dur = 10;
+						my @v = ($x, $y);
+						$v[0] = $v[0] + ($v[0] - ($swidth/2));
+						$v[1] = $v[1] + ($v[1] - ($sheight/2));
+
+						$scene->writer->emptyTag(
+							'animateMotion',
+							id => $animid,
+							path => $points. " L ".$v[0]." ".$v[1],
+							begin => $begin.'s',
+							dur => $dur.'s',
+							fill => 'freeze',
+						);
+						$points = "M $x $y";
+					}
 				$scene->writer->endTag();
 				
 				$x = $x + $w;
