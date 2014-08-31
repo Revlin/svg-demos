@@ -84,7 +84,8 @@ print $scene->desc, "\n";	# debug
 							transform => "translate(0,0)"
 						);
 					$scene->writer->endTag();
-					$scene->writer->emptyTag( 'rect',
+					
+					$scene->writer->startTag( 'rect',
 						transform => "translate(0,0)",
 						style => "fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer$layerId-clip);",
 						x => "0", 
@@ -92,6 +93,8 @@ print $scene->desc, "\n";	# debug
 						width => "$swidth",
 						height => "$sheight"
 					);
+					$scene->writer->endTag();
+					
 					$scene->writer->emptyTag( 'use',
 						transform => "translate(0,0)",
 						'xlink:href' => "#char-test-shatter-img",
