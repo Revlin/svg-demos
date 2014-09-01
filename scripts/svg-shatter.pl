@@ -108,24 +108,25 @@ print $scene->desc, "\n";	# debug
 						d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z" 
 					);					
 					my $points = "M 0 0";
+					my @v = (0.0, 1.0);
+					$v[0] = 5 - (10*rand);
 						
-					for( my $i=0; $i < 1; $i++ ) {
-						my $animid = "$layerId-$i";
-						my $begin = 0;
-						my $dur = 10;
-						my @v = ($x, $y);
-						$v[0] = $v[0] + ($v[0] - ($swidth/2));
-						$v[1] = $v[1] + ($v[1] - ($sheight/2));
+					for( my $i=0; $i < 3; $i++ ) {
+						my $animid = "fall$layerId-$i";
+						my $begin = $i*3.33;
+						my $dur = 3.33;
+						$v[0] += $v[0] * 0.1;
+						$v[1] += $v[1] * 9.0;
 
 						$scene->writer->emptyTag(
 							'animateMotion',
 							id => $animid,
 							path => $points. " L ".$v[0]." ".$v[1],
-							begin => $begin.'s',
+							begin =>  $begin.'s',#($i < 1)? $begin.'s': "fall$layerId-".($i-1).'.end',
 							dur => $dur.'s',
 							fill => 'freeze',
 						);
-						$points = "M $x $y";
+						$points = "M ".$v[0]." ".$v[1];
 					}
 				$scene->writer->endTag();
 				
@@ -133,6 +134,9 @@ print $scene->desc, "\n";	# debug
 				$w = (($r%2) < 1)? 
 						$h * ($s%2 + 1):
 						$h * (2 - $s%2);
+				if( ($x + $w) > $swidth ){
+					$w = $swidth - $x;
+				}
 			}
 		}
 
