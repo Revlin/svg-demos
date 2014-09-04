@@ -113,7 +113,7 @@ print $scene->desc, "\n";	# debug
 						
 					for( my $i=0; $i < 3; $i++ ) {
 						my $animid = "fall$layerId-$i";
-						my $begin = $i*3.33;
+						my $begin = $s*3.33;
 						my $dur = 3.33;
 						$v[0] += $v[0] * 0.1;
 						$v[1] += $v[1] * 9.0;
@@ -122,7 +122,7 @@ print $scene->desc, "\n";	# debug
 							'animateMotion',
 							id => $animid,
 							path => $points. " L ".$v[0]." ".$v[1],
-							begin =>  $begin.'s',#($i < 1)? $begin.'s': "fall$layerId-".($i-1).'.end',
+							begin =>  ($i < 1)? $begin.'s': "fall$layerId".($i-1).'.end',
 							dur => $dur.'s',
 							fill => 'freeze',
 						);
