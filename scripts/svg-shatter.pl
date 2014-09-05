@@ -32,7 +32,7 @@ print $scene->desc, "\n";	# debug
 	$scene->writer->startTag( 'g',
 		id => "char-test",
 		class => "shatter-layer0",
-		transform => "translate(100,100)"
+		transform => "translate(80,0)"
 	);
 		$scene->writer->startTag( 'defs' );
 			$scene->writer->emptyTag( 'image',
@@ -40,8 +40,8 @@ print $scene->desc, "\n";	# debug
 				'xlink:href' => "images/char.png",
 				x => "0",
 				y => "0",
-				width => "200",
-				height => "200"
+				width => "480",
+				height => "360"
 			);
 		$scene->writer->endTag();
 		
@@ -49,11 +49,11 @@ print $scene->desc, "\n";	# debug
 			style => "fill:none; stroke:#ff0000; stroke-width:2px;",
 			x => "0", 
 			y => "0",
-			width => "200",
-			height => "200"
+			width => "480",
+			height => "360"
 		);
 		
-		my( $swidth, $sheight, $rows ) = ( 200, 200, 10 );
+		my( $swidth, $sheight, $rows ) = ( 480, 360, 25 );
 		
 		for( my $r=0; $r<$rows; $r++ ) {
 			# Create brick pattern with alternating width
@@ -110,11 +110,12 @@ print $scene->desc, "\n";	# debug
 					my $points = "M 0 0";
 					my @v = (0.0, 1.0);
 					$v[0] = 5 - (10*rand);
+					$v[1] = 1 + (10*rand);
 						
 					for( my $i=0; $i < 3; $i++ ) {
-						my $animid = "fall$layerId-$i";
-						my $begin = $s*3.33;
-						my $dur = 3.33;
+						my $animid = "fall$layerId$i";
+						my $begin = $s*0.33;
+						my $dur = 0.33;
 						$v[0] += $v[0] * 0.1;
 						$v[1] += $v[1] * 9.0;
 
