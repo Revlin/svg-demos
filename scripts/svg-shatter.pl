@@ -37,7 +37,7 @@ print $scene->desc, "\n";	# debug
 		$scene->writer->startTag( 'defs' );
 			$scene->writer->emptyTag( 'image',
 				id => "char-test-shatter-img",
-				'xlink:href' => "images/char.png",
+				'xlink:href' => "images/char-front.png",
 				x => "0",
 				y => "0",
 				width => "480",
@@ -104,7 +104,7 @@ print $scene->desc, "\n";	# debug
 						height => "$sheight"
 					);
 					$scene->writer->emptyTag( 'path',
-						#style => "stroke:none;",
+						style => "stroke:none;",
 						d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z" 
 					);					
 					my $points = "M 0 0";
@@ -114,7 +114,7 @@ print $scene->desc, "\n";	# debug
 						
 					for( my $i=0; $i < 3; $i++ ) {
 						my $animid = "fall$layerId$i";
-						my $begin = $s*0.33;
+						my $begin = $s*(0.3 + 0.03*rand);
 						my $dur = 0.33;
 						$v[0] += $v[0] * 0.1;
 						$v[1] += $v[1] * 9.0;
