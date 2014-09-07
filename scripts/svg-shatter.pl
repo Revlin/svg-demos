@@ -28,32 +28,40 @@ my $scene = scene->new( {
 	} );
 print $scene->title, "\n"; 	# debug
 print $scene->desc, "\n";	# debug
+		
+my( $swidth, $sheight, $rows ) = ( 360, 320, 40 );
 	
 	$scene->writer->startTag( 'g',
 		id => "char-test",
 		class => "shatter-layer0",
-		transform => "translate(80,0)"
+		transform => "translate(". ($width-$swidth)/2 .",0)"
 	);
-		$scene->writer->startTag( 'defs' );
+	
+		$scene->writer->startTag( 'defs' ); #<defs>
 			$scene->writer->emptyTag( 'image',
 				id => "char-test-shatter-img",
 				'xlink:href' => "images/char-front.png",
 				x => "0",
 				y => "0",
-				width => "480",
-				height => "360"
+				width => "$height", # some wierdness about specifying the image dimensions
+				height => "$height"
 			);
-		$scene->writer->endTag();
-		
-		$scene->writer->emptyTag( 'rect',
-			style => "fill:none; stroke:#ff0000; stroke-width:2px;",
+			$scene->writer->emptyTag( 'image',
+				id => "char-test-background-img",
+				'xlink:href' => "images/char-back.png",
+				x => "0",
+				y => "0",
+				width => "$height", # some wierdness about specifying the image dimensions
+				height => "$height"
+			);
+		$scene->writer->endTag(); #</defs>
+					
+		$scene->writer->emptyTag( 'use',
+			transform => "translate(0,0)",
+			'xlink:href' => "#char-test-background-img",
 			x => "0", 
-			y => "0",
-			width => "480",
-			height => "360"
+			y => "0"
 		);
-		
-		my( $swidth, $sheight, $rows ) = ( 480, 360, 25 );
 		
 		for( my $r=0; $r<$rows; $r++ ) {
 			# Create brick pattern with alternating width
@@ -72,7 +80,7 @@ print $scene->desc, "\n";	# debug
 							"$layerId";
 				print "$layerId, $s, $x, $w\n";
 
-				$scene->writer->startTag( 'g',
+				$scene->writer->startTag( 'g', #<g>
 					class => "shatter-layer$layerId",
 					transform => "translate(0,0)"
 				);
@@ -81,13 +89,13 @@ print $scene->desc, "\n";	# debug
 					);
 						$scene->writer->emptyTag( 'path', 
 							d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z",
-							transform => "translate(0,0)"
+							transform => "translate(0,". ($height-$sheight)/2 .")"
 						);
 					$scene->writer->endTag();
 					
 					$scene->writer->emptyTag( 'rect',
 						transform => "translate(0,0)",
-						style => "fill:#ff0000; stroke:none; clip-path:url(#char-test-shatter-layer$layerId-clip);",
+						style => "fill:none; stroke:none; clip-path:url(#char-test-shatter-layer$layerId-clip);",
 						x => "0", 
 						y => "0",
 						width => "$swidth",
@@ -104,8 +112,9 @@ print $scene->desc, "\n";	# debug
 						height => "$sheight"
 					);
 					$scene->writer->emptyTag( 'path',
-						style => "stroke:none;",
-						d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z" 
+						style => "stroke:none;", # show fragment outline by commenting this line out
+						d => "M $x $y L ".($x+$w)." $y L ".($x+$w)." ".($y+$h)." L $x ".($y+$h)." Z",
+						transform => "translate(0,". ($height-$sheight)/2 .")"
 					);					
 					my $points = "M 0 0";
 					my @v = (0.0, 1.0);
@@ -129,6 +138,7 @@ print $scene->desc, "\n";	# debug
 						);
 						$points = "M ".$v[0]." ".$v[1];
 					}
+					
 				$scene->writer->endTag();
 				
 				$x = $x + $w;
@@ -140,8 +150,16 @@ print $scene->desc, "\n";	# debug
 				}
 			}
 		}
-
-	$scene->writer->endTag();
+		
+		$scene->writer->emptyTag( 'rect',
+			style => "fill:none; stroke:none", #"fill:none; stroke:#0000ff; stroke-width:2px;",
+			x => "0", 
+			y => "0",
+			width => "$swidth",
+			height => "$sheight",
+			transform => "translate(0,". ($height-$sheight)/2 .")"
+		);
+	$scene->writer->endTag(); #</g>
 
 $scene->end();
 print $svgFile "\n";
