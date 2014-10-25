@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG AngularJS</title>
+	
+	<script type="text/ecmascript" src="data/lib/angular/angular.js"></script>
+	<script type="text/ecmascript" src="data/scripts/Debugger.js"></script>
+	<script type="text/ecmascript" src="data/scripts/practice.js"></script>
+	<script type="text/ecmascript">	
+	//<![CDATA[
+	/**
+	 *  creates a circle in the upper left corner of its container
+	 *  with the given radius. `<custom-circle radius="10"/>`
+	 * (Adapted from https://gist.github.com/blesh/2a11d1b4d65006d6ade3#file-custom-circle-js)
+	 */
+	practice.directive('customCircle', function(){
+	  return {
+		restrict: 	'C',
+
+		// the following two configuration options are 
+		// required for SVG custom elements.
+		templateNamespace: 'svg',
+		replace: true, 
+
+		// NOTE: ng-attr- style binding is used to prevent SVG validation
+		// error messages.
+		template: '<circle ng-attr-cx="{{radius}}" ng-attr-cy="{{radius}}" ng-attr-r="{{radius}}"/>',
+
+		// everything else as normal
+		scope: {
+		  radius: '@',
+		}
+	  };
+	});
+	//]]>
+	</script>	
+</head>
+<body>
+	<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<style type="text/css">
+			text.title {
+				fill:		#000;
+				stroke:		none;
+				font-family:sans-serif;
+				font-weight:bold;
+				font-size:	34pt;
+			}
+		</style>
+		<defs>
+			<font-face font-family="raleway">
+				  <font-face-src>
+						<font-face-uri
+						   xlink:href="data/fonts/font-raleway-semibold.svg#ralewaysemibold" />
+				  </font-face-src>
+			</font-face>
+		</defs>
+
+		<g data-ng-app="practice-angularjs" 
+		   data-ng-init="name = 'World'">
+
+			<circle cx="480" cy="90" r="30" />
+
+			<g class="custom-circle"></g>
+
+			<text data-ng-controller="HelloController" 
+				  class="title"
+				  style="font-family:raleway;"
+				  x="6"
+				  y="72"
+				  textLegnth="400"
+				  lengthAdjust="spacingAndGlyphs">{{greet(name)}}
+			</text>
+		</g>
+
+	</svg>
+
+</body></html>
