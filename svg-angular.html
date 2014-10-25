@@ -37,7 +37,18 @@
 	//]]>
 	</script>	
 </head>
-<body>
+<body data-ng-app="practice-angularjs">
+<div data-ng-controller='typeBoxController'>
+	<div style="max-width:240px;">
+			You: <div class="practice-user-message"></div>
+		<p>
+			<span data-ng-show="remaining()">Keep Typing</span><span data-ng-show="(! remaining() )">Stop Typing</span>
+			(<span data-ng-class="{'warning': warning()}">remaining chars: {{remaining()}}</span>)
+		</p>
+	</div>
+	
+	<p>Circle Radius: <input type="range" min="1" max="101" data-ng-model="rad"  /></p>
+	
 	<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<style type="text/css">
 			text.title {
@@ -45,7 +56,7 @@
 				stroke:		none;
 				font-family:sans-serif;
 				font-weight:bold;
-				font-size:	34pt;
+				font-size:	24pt;
 			}
 		</style>
 		<defs>
@@ -57,10 +68,9 @@
 			</font-face>
 		</defs>
 
-		<g data-ng-app="practice-angularjs" 
-		   data-ng-init="name = 'World'">
+		<g data-ng-init="name = 'World'; rad=50">
 
-			<circle cx="480" cy="90" r="30" />
+			<circle cx="480" cy="90" r="{{rad}}" />
 
 			<g class="custom-circle"></g>
 
@@ -70,10 +80,24 @@
 				  x="6"
 				  y="72"
 				  textLegnth="400"
-				  lengthAdjust="spacingAndGlyphs">{{greet(name)}}
+				  lengthAdjust="spacingAndGlyphs">
+				{{greet(name)}}<tspan x="0" dy="30">
+				Welcome to the wonderful</tspan><tspan x="0" dy="30">
+				world of SVG + AngularJS!</tspan>
 			</text>
+			
+			<g style="max-width:240px;">
+				<text class="title"
+					  style="font-family:raleway;" 
+					  x="6" 
+					  y="175" 
+					  textLegnth="400" 
+					  lengthAdjust="spacingAndGlyphs">
+					<tspan class="practice-svg-message">{{greeting}} "{{usrmsg}}"</tspan>
+				</text>
+			</g>
 		</g>
 
 	</svg>
-
+</div>
 </body></html>

@@ -101,10 +101,12 @@ try {
 	$scope.MAX_LEN = 100;
 	$scope.WARN_LEN = 10;
 	$scope.greeting = "You said,";
-	$scope.usrmsg = "";
+	//$scope.usrmsg = $scope.usrmsg || "";
 	$scope.longmsg = false;
 	
 	$scope.remaining = function() {
+		if(! $scope.usrmsg ) return $scope.MAX_LEN;
+		
 		var remains = $scope.MAX_LEN - $scope.usrmsg.length;
 		return( remains > 0 )?
 			remains:
@@ -112,11 +114,15 @@ try {
 	};
 	
 	$scope.warning = function() {
+		if(! $scope.usrmsg ) return false;
+		
 		var remains = $scope.MAX_LEN - $scope.usrmsg.length;
 		return( remains < $scope.WARN_LEN );
 	};
 
 	$scope.transformField = function() {
+		if(! $scope.usrmsg ) return $scope.longmsg;
+		
 	try {
 		if ($scope.usrmsg.length > 20) {
 			$scope.longmsg = true;
@@ -128,6 +134,7 @@ try {
 	} finally {
 		return $scope.longmsg;
 	}
+		
 	};
 } catch(e) {
 	Debugger.log( e.stack );
@@ -147,6 +154,7 @@ try {
 			var $lilBox = angular.element( element.children()[0] );
 			var $bigBox = angular.element( element.children()[1] );
 			scope.$watch(scope.transformField, function( n, o, scope ){
+				Debugger.log( o, "practiceUserMessage: $1" );
 				if( n === o ) {
 					return;
 				} else if(! n ) {
@@ -160,6 +168,44 @@ try {
 						$bigBox[0].selectionEnd = 
 						$bigBox[0].value.length;
 				}
+			} );
+		}
+	};
+} catch(e) {
+	Debugger.log( e.stack );
+}
+} );
+practice.directive( 'practiceSvgMessage', function() {
+try {
+	return {
+		restrict: 	'C',
+		//transclude:	true,
+		// the following two configuration options are 
+		// required for SVG custom elements.
+		templateNamespace: 'svg',
+		replace: true, 
+		template: 	'<tspan data-ng-model="usrmsg" data-ng-hide="longmsg"  data-ng-change="transformField()">{{usrmsg}}</tspan>',
+		link: function( scope, element, attrs ) {
+			var $lilBox = angular.element( element.children()[0] );
+			var $bigBox = angular.element( element.children()[1] );
+			scope.$watch(scope.transformField, function( n, o, scope ){
+				Debugger.log( o, "practiceSvgMessage: $1" );
+				/*
+				if( n === o ) {
+					return;
+				} else if(! n ) {
+					$lilBox[0].focus();
+					$lilBox[0].selectionStart = 
+						$lilBox[0].selectionEnd = 
+						$lilBox[0].value.length;
+				} else {
+					$bigBox[0].focus();
+					$bigBox[0].selectionStart = 
+						$bigBox[0].selectionEnd = 
+						$bigBox[0].value.length;
+				}
+				*/
+				return true;
 			} );
 		}
 	};
