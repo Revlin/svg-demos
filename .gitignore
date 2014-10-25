@@ -1,3 +1,6 @@
-Thumbs.db
+lib
+node_modules
+npm-debug.log
 svg-edit/build
 svg-edit/editor/svgedit.compiled.js
+Thumbs.db
