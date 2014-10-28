@@ -5,47 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SVG AngularJS</title>
 	
-	<script type="text/ecmascript" src="data/lib/angular/angular.js"></script>
-	<script type="text/ecmascript" src="data/scripts/Debugger.js"></script>
-	<script type="text/ecmascript" src="data/scripts/practice.js"></script>
-	<script type="text/ecmascript">	
-	//<![CDATA[
-	/**
-	 *  creates a circle in the upper left corner of its container
-	 *  with the given radius. `<custom-circle radius="10"/>`
-	 * (Adapted from https://gist.github.com/blesh/2a11d1b4d65006d6ade3#file-custom-circle-js)
-	 */
-	practice.directive('customCircle', function(){
-	  return {
-		restrict: 	'C',
-
-		// the following two configuration options are 
-		// required for SVG custom elements.
-		templateNamespace: 'svg',
-		replace: true, 
-
-		// NOTE: ng-attr- style binding is used to prevent SVG validation
-		// error messages.
-		template: '<circle ng-attr-cx="{{radius}}" ng-attr-cy="{{radius}}" ng-attr-r="{{radius}}"/>',
-
-		// everything else as normal
-		scope: {
-		  radius: '@',
-		}
-	  };
-	});
-	//]]>
-	</script>	
+	<script type="text/javascript" src="data/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="data/scripts/Debugger.js"></script>
+	<script type="text/javascript" src="data/scripts/practice.js"></script>
 </head>
 <body data-ng-app="practice-angularjs">
-<div data-ng-controller='typeBoxController'>
-	<div style="max-width:240px;">
-			You: <div class="practice-user-message"></div>
-		<p>
-			<span data-ng-show="remaining()">Keep Typing</span><span data-ng-show="(! remaining() )">Stop Typing</span>
-			(<span data-ng-class="{'warning': warning()}">remaining chars: {{remaining()}}</span>)
-		</p>
-	</div>
 	
 	<p>Circle Radius: <input type="range" min="1" max="101" data-ng-model="rad"  /></p>
 	
@@ -85,19 +49,7 @@
 				Welcome to the wonderful</tspan><tspan x="0" dy="30">
 				world of SVG + AngularJS!</tspan>
 			</text>
-			
-			<g style="max-width:240px;">
-				<text class="title"
-					  style="font-family:raleway;" 
-					  x="6" 
-					  y="175" 
-					  textLegnth="400" 
-					  lengthAdjust="spacingAndGlyphs">
-					<tspan class="practice-svg-message">{{greeting}} "{{usrmsg}}"</tspan>
-				</text>
-			</g>
 		</g>
 
 	</svg>
-</div>
 </body></html>
