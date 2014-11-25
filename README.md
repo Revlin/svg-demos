@@ -6,15 +6,15 @@ Exploring SVG through scripting with Perl, SVG and XSLT.
 Some examples:
 
 
-[Shatter ](http://www.uni-sol.org/svg-demos/data/shatter-scene.svg)
+[Shatter ](svg-demos/data/shatter-scene.svg)
 (procedurally generated animation of rock fragments falling away to reveal chiseled glyph)
 ![Bouncing Ball](data/images/shatter.png)
 
-[Bounce ](http://www.uni-sol.org/svg-demos/data/bounce.svg)
+[Bounce ](svg-demos/data/bounce.svg)
 (procedurally generated animation path for a bouncing ball; hooray!)
 ![Bouncing Ball](data/images/bounce.png)
 
-[Botanical Slides ](http://www.uni-sol.org/svg-demos/data/xslt-transform.svg)
+[Botanical Slides ](svg-demos/data/xslt-transform.svg)
 (interactive /click & rotate/ slides, created with XSLT transformations of an XML catalog of plants into an animated SVG)
 ![Rotating Slides](data/images/slides.png)
 
