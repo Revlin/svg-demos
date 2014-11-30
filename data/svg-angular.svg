@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <svg width="640" height="360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<script type="text/ecmascript" xlink:href="lib/angular/angular.js"></script>
+	<script type="text/ecmascript" xlink:href="libs/angular/angular.js"></script>
 	<script type="text/ecmascript" xlink:href="scripts/Debugger.js"></script>
 	<script type="text/ecmascript" xlink:href="scripts/practice.js"></script>
 	<script type="text/ecmascript">	
