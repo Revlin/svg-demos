@@ -22,7 +22,7 @@
 
 		// NOTE: ng-attr- style binding is used to prevent SVG validation
 		// error messages.
-		template: '<circle ng-attr-cx="{{radius}}" ng-attr-cy="{{radius}}" ng-attr-r="{{radius}}"/>',
+		template: '<circle data-ng-attr-cx="{{radius}}" data-ng-attr-cy="{{radius}}" data-ng-attr-r="{{radius}}"/>',
 
 		// everything else as normal
 		scope: {
