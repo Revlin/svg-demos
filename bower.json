@@ -1,0 +1,32 @@
+{
+  "name": "svg-demos",
+  "authors": [
+    "John <john@real-currents.com>"
+  ],
+  "description": "Exploring SVG through scripting with JavaScript, Node, Perl, SVG and XSLT",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "JavaScript",
+    "Node",
+    "Perl",
+    "SVG",
+    "and",
+    "XSLT"
+  ],
+  "license": "CC BY-SA 3.0 NZ",
+  "homepage": "http://uni-sol.org/svg-demos",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "data/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "https://github.com/Real-Currents/angular.git#real/currents",
+    "raphael": "https://github.com/Real-Currents/raphael.git#real/currents"
+  }
+}
