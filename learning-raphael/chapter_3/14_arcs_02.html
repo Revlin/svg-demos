@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Arcs 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 380px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Arcs 02</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 800, 400); 
+
+        // Minor arc with a positive sweep flag
+        paper.path([
+            'M', 50, 60,
+            'a', 150, 80, 0, 0, 1, 0, 80
+        ]).attr({
+            'stroke-width': 5,
+            'arrow-end': 'classic-medium-medium'
+        });
+
+        // Mark start and end points
+        paper.circle(50, 60, 5);
+        paper.circle(50, 140, 5);
+        
+
+    </script>
+</body>
+</html>
+

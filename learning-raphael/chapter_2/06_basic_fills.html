@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Basic Fills</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Fills</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+
+        var circle = paper.circle(100, 100, 50);
+        circle.attr({fill: 'pink'});
+
+        // Fill rectangle black
+        var square = paper.rect(200, 50, 200, 100);
+        square.attr({fill: '#000'});
+
+        var rect2 = paper.rect(450, 50, 50, 50);
+        rect2.attr({fill: 'rgb(0, 0, 0)'});
+    </script>
+</body>
+</html>
+

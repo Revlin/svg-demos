@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 01</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 01</h1>
+    <p>Animation run on page load.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200);
+
+        var circle = paper.circle(100, 100, 50).attr({fill: 'green'});
+
+        circle.animate({
+            cx: 500,
+            r: 15
+        }, 1000);
+    </script>
+</body>
+</html>
+

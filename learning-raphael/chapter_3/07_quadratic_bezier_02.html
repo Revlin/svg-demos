@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Quadratic Bezier 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Quadratic Bezier 02</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+        paper.path(['M', 50, 150, 'Q', 100, 40, 400, 150]);
+
+        // Draw the points to be clear
+        var points = paper.set(
+            paper.circle(50, 150, 5),
+            paper.circle(100, 40, 5),
+            paper.circle(400, 150, 5)
+        ).attr({fill: '#09c', 'stroke-width':0});
+    </script>
+</body>
+</html>
+

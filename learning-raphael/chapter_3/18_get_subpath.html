@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>getSubPath</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>getSubPath</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 400, 800); 
+
+        var path = paper.path([
+            'M', 100, 100,
+            'c', 0, 100, 200, -100, 200, 0
+        ]).attr({
+            'stroke-width': 5,
+        });
+
+        var totalLength = path.getTotalLength();
+
+        // Get subpath
+        var subPath = path.getSubpath(totalLength / 4, totalLength / 2);
+        console.log(subPath);
+        paper.path(subPath).attr({
+            'stroke-width': 15,
+            stroke: '#09c'
+        });
+
+
+    </script>
+</body>
+</html>
+

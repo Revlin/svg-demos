@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Working with Existing SVGs 01</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 1000px;
+            height: 1000px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Working with Existing SVGs 01</h1>
+    <p>We're animating from one arc path to another over the length of one side of a square and
+        then rotating the element and repeating this process <em>ad infinitum</em>.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 1000, 1000);
+
+        var initialPath = 'M 197,94.46 A 98.5,94.5 0 1 1 167.39,26.92 L 98.5,94.46 z';
+        var pac = paper.path(initialPath);
+        pac.attr({fill: '#09c', 'stroke-width': 0});
+
+        var rotation = 0;
+        var move = function() {
+            var x = Math.cos(Raphael.rad(rotation)) * 800;
+            var y = Math.sin(Raphael.rad(rotation)) * 800;
+            pac.animate({
+                path: 'M 197,94.46 a 98.5,94.5 0 1 1 -2.1e-4,-0.194727, L 98.5,94.46 z',
+                transform: ['...T', x, y]
+            }, 500, function() {
+                // Rotate our element and reset the path
+                rotation += 90;
+                pac.attr({
+                    path: initialPath
+                }).transform(['...R', 90]);
+                setTimeout(move);
+            });
+        }
+        move();
+
+    </script>
+</body>
+</html>
+

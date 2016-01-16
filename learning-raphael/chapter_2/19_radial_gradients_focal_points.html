@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Radial Gradients - Focal Points</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 740px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Radial Gradients - Focal Points</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 740, 200); 
+
+        var circle = paper.circle(100, 100, 80);
+        circle.attr({
+            'stroke-width': 0,
+            fill: 'r(0.1, 0.5)#fff-#000'
+        });
+        var circle2 = paper.circle(280, 100, 80);
+        circle2.attr({
+            'stroke-width': 0,
+            fill: 'r(0.5, 0.1)#fff-#000'
+        });
+        var circle3 = paper.circle(460, 100, 80);
+        circle3.attr({
+            'stroke-width': 0,
+            fill: 'r(0.9, 0.5)#fff-#000'
+        });
+        var circle4 = paper.circle(640, 100, 80);
+        circle4.attr({
+            'stroke-width': 0,
+            fill: 'r(0.5, 0.9)#fff-#000'
+        });
+
+
+    </script>
+</body>
+</html>
+

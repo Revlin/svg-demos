@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Arcs 03</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Arcs 03</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 400, 200); 
+
+        // Large arc with a 0 sweep flag
+        paper.path([
+            'M', 350, 60,
+            'a', 150, 80, 0, 1, 0, 0, 80
+        ]).attr({
+            'stroke-width': 5,
+            'arrow-end': 'classic-medium-medium'
+        });
+        
+        // Minor arc with a zero sweep flag
+        paper.path([
+            'M', 350, 60,
+            'a', 150, 80, 0, 0, 0, 0, 80
+        ]).attr({
+            'stroke-width': 3,
+            'arrow-end': 'classic-medium-medium',
+        });
+
+        // Mark start and end points
+        paper.circle(350, 60, 5);
+        paper.circle(350, 140, 5);
+        
+
+    </script>
+</body>
+</html>
+

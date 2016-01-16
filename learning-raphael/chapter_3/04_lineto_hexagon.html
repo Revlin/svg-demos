@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>lineto Hexagon</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1><em>lineto</em> Hexagon</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+
+        var sideLength = 100;
+        var x = sideLength * Math.cos(Raphael.rad(60));
+        var y = sideLength * Math.sin(Raphael.rad(60));
+
+        var path = paper.path([
+            'M', 150, 15,
+            'l', sideLength, 0,
+            x, y,
+            -x, y,
+            -sideLength, 0,
+            -x, -y,
+            x,-y,
+        ]);
+
+        path.attr({
+            'fill':'#dadada'
+        });
+
+        // The following draws the side length trigonometric calculation illustration
+        var lx = 2*x,
+            ly = 2*y;
+        paper.path(
+            ['M', 350, 15, 'l', lx, ly ]
+        );
+        paper.path([
+            'M', 350, 15, 'h', lx, 'v', ly
+        ]).attr('stroke-dasharray', '- ');
+
+        paper.path([
+            'M', 400, 15, 'a', 50, 50, 0, 0, 1, -25, 43.3
+        ]);
+        paper.text(415, 50, '60').attr('font-size', 18);
+    </script>
+</body>
+</html>
+

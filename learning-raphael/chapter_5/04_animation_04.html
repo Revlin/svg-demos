@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 04</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 270px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 04</h1>
+    <p>Clicking the square starts the animation.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 300);
+        // Draw Catmull-Rom curve
+        var pathStart = ['M', 50, 250, 'R', 100, 100, 150, 150, 200, 140, 250, 200, 300, 80, 350, 130, 400, 250, 'H', 50, 'z'];
+        var pathEnd = ['M', 50, 250, 'R', 100, 130, 150, 220, 200, 200, 250, 100, 300, 200, 350, 180, 400, 250, 'H', 50, 'z'];
+        var curve = paper.path( pathStart ).attr({fill: 'green'}).attr({'stroke-width': 0, 'stroke-linejoin': 'round'});
+
+        var rect = paper.rect(500, 100, 50, 50).attr({'fill': '#333', cursor: 'pointer'}).click(function() {
+            curve.animate({
+                path: pathEnd
+            }, 500);
+        });
+
+    </script>
+</body>
+</html>
+

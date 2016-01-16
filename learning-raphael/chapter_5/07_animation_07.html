@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 07</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 270px;
+            height: 270px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 07</h1>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 300);
+        var square = paper.rect(100, 75, 100, 100).attr({fill: '#09c'});
+
+        square.click(function() {
+            this.animate({
+                transform: ['...r 45']
+            }, 300);
+        });
+    </script>
+</body>
+</html>
+

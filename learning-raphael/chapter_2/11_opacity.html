@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Opacity</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('bg_pattern2.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Opacity</h1>
+    <p>Demonstrating full-shape opacity, stroke-opacity and fill-opacity.</p>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+
+        var rect = paper.rect(30, 30, 140, 140);
+        rect.attr({
+            fill: '#eee',
+            opacity: 0.5,
+            'stroke-width': 9
+        });
+
+        var rect2 = paper.rect(215, 30, 140, 140);
+        rect2.attr({
+            fill: '#eee',
+            'stroke-opacity': 0.5,
+            'stroke-linejoin': 'bevel',
+            'stroke-width': 20
+        });
+
+        var rect2 = paper.rect(400, 30, 140, 140);
+        rect2.attr({
+            fill: '#eee',
+            'fill-opacity': 0.5,
+            'stroke-width': 15
+        });
+
+    </script>
+</body>
+</html>
+

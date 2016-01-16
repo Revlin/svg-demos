@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Text</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 540px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 540, 200); 
+
+        var text1 = paper.text(0, 15, 'I am text and am anchored start.');
+        text1.attr({
+            'text-anchor': 'start'
+        });
+        var text2 = paper.text(270, 100, 'I am text and am \nanchored middle.');
+        text2.attr({
+            'text-anchor': 'middle'
+        });
+
+        var group = paper.set(text1, text2);
+        group.attr({
+            'font-size': 20,
+            'font-family': 'serif',
+        });
+    </script>
+</body>
+</html>
+

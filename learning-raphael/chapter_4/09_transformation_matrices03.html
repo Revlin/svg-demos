@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Transformation Matrices 03</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Transformation Matrices 03 (Shear)</h1>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 400, 500, function() {
+            var paper = this;
+
+            var square = paper.rect(50, 50, 100, 100).attr('fill', '#09c');
+            var toggle = 0;
+            square.click(function() {
+                this.transform('M 1 0 0.5 1 0 0');
+            });
+            square.dblclick(function() {
+                this.transform('');
+            });
+        });
+    </script>
+</body>
+</html>
+

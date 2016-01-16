@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Embedding Images</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 252px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Embedding Images</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+
+        var paper = Raphael('my-canvas', 600, 252); 
+
+        paper.image('stella.jpg', 15, 15, 144, 192);
+    </script>
+</body>
+</html>
+

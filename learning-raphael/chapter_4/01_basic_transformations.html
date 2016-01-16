@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Basic Transformations</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Basic Transformations</h1>
+    <h2>Translation</h2>
+    <div id="translation" class="canvas"></div>
+    <h2>Rotation</h2>
+    <div id="rotation" class="canvas"></div>
+    <h2>Rotation About a Point Relative</h2>
+    <p>The old triangle is first translated and <em>then</em> the rotation takes place. Effectively the point (220, 100) is also translated to (320,100).</p>
+    <div id="rotation-point-relative" class="canvas"></div>
+    <h2>Rotation About a Point Absolute</h2>
+    <p>The old triangle is translated and <em>then</em> the rotation takes place about the original rotation point.</p>
+    <div id="rotation-point-absolute" class="canvas"></div>
+    <h2>Scaling</h2>
+    <div id="scaling" class="canvas"></div>
+    <h2>Scaling-xy</h2>
+    <div id="scaling-xy" class="canvas"></div>
+
+
+    <script type="text/javascript">
+        /**
+         * 01. Translation
+         *
+         * Note that this form of the Raphael constructor allows us to
+         * run each canvas drawing in its own scope
+         */
+        Raphael('translation', 600, 200, function() {
+            var paper = this; // this Refers to the Paper object
+
+            var triangle = paper.path("M 150 20 l 100 160 l -200 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 5,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': ''
+            });
+
+            // *Our actual transformation*
+            triangleCopy.transform("T 300 0");
+
+            // A line path to demonstrate the translation
+            var arrow = paper.path("M 250 100 l 100 0 ").attr({
+                'arrow-end': 'classic-medium-medium',
+                'stroke-width': 5
+            });
+        });
+
+        /**
+         * 02. Rotation
+         *
+         * Combines both translation and rotation
+         */
+        Raphael('rotation', 600, 200, function() {
+            var paper = this;
+
+            var triangle = paper.path("M 150 20 l 100 160 l -200 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 5,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': ''
+            });
+
+            // *Our actual transformation*
+            triangleCopy.transform("t 350 -35 r 45");
+
+            // A line path to demonstrate the translation
+            var arrow = paper.path("M 250 100 l 100 0 ").attr({
+                'arrow-end': 'classic-medium-medium',
+                'stroke-width': 5
+            });
+        });
+
+        /**
+         * 03. Rotation about a point relative
+         *
+         * Combines both translation and rotation
+         */
+        Raphael('rotation-point-relative', 600, 200, function() {
+            var paper = this;
+
+            var triangle = paper.path("M 300 80 l 30 40 l -60 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 2,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopyTranslateOnly = triangle.clone(); // Clones our object
+            triangleCopyTranslateOnly.attr({
+                'fill': '#ddd'
+            });
+            triangleCopyTranslateOnly.transform('t 100 0');
+
+            // Transform point will be translated, as relative
+            paper.circle(320, 100, 5).attr('fill', '#000');
+
+            // *Our actual transformation*
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': '',
+                'fill': '#ddd'
+            });
+            triangleCopy.transform("t 100 0 r 180 220 100");
+        });
+
+        /**
+         * 04. Rotation about a point absolute
+         *
+         * Combines both translation and rotation
+         */
+        Raphael('rotation-point-absolute', 600, 200, function() {
+            var paper = this;
+
+            var triangle = paper.path("M 300 80 l 30 40 l -60 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 2,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopyTranslateOnly = triangle.clone(); // Clones our object
+            triangleCopyTranslateOnly.attr({
+                'fill': '#ddd'
+            });
+            triangleCopyTranslateOnly.transform('t 100 0');
+
+            // Mark the transform point on the page
+            paper.circle(220, 100, 5).attr('fill', '#000');
+
+            // *Our actual transformation*
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': '',
+                'fill': '#ddd'
+            });
+            triangleCopy.transform("t 100 0 R 180 220 100");
+        });
+
+        /**
+         * 05. Scaling
+         *
+         * Combines both translation and scaling
+         */
+        Raphael('scaling', 600, 200, function() {
+            var paper = this;
+
+            var triangle = paper.path("M 150 20 l 100 160 l -200 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 5,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': ''
+            });
+
+            // *Our actual transformation*
+            triangleCopy.transform("t 300 0 s 0.5");
+
+            // A line path to demonstrate the translation
+            var arrow = paper.path("M 250 100 l 100 0 ").attr({
+                'arrow-end': 'classic-medium-medium',
+                'stroke-width': 5
+            });
+        });
+
+        /**
+         * 06. Scaling in x and y
+         *
+         * Combines both translation and scaling
+         */
+        Raphael('scaling-xy', 600, 200, function() {
+            var paper = this;
+
+            var triangle = paper.path("M 150 20 l 100 160 l -200 0 z").attr({
+                'stroke-dasharray': '- ',
+                'stroke-width': 5,
+                'stroke-linejoin': 'round'
+            });
+
+            var triangleCopy = triangle.clone(); // Clones our object
+            triangleCopy.attr({
+                'stroke-dasharray': ''
+            });
+
+            // *Our actual transformation*
+            triangleCopy.transform("t 310 0 s 1.2 0.5");
+
+            // A line path to demonstrate the translation
+            var arrow = paper.path("M 250 100 l 100 0 ").attr({
+                'arrow-end': 'classic-medium-medium',
+                'stroke-width': 5
+            });
+        });
+    </script>
+</body>
+</html>
+

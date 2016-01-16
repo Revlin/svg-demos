@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>closepath</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1><em>closepath</em></h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+
+        var sideLength = 100;
+        var x = sideLength * Math.cos(Raphael.rad(60));
+        var y = sideLength * Math.sin(Raphael.rad(60));
+
+        // Unclosed path
+        var path = paper.path([
+            'M', 125, 15,
+            'l', sideLength, 0,
+            x, y,
+            -x, y,
+            -sideLength, 0,
+            -x, -y,
+            x,-y,
+        ]);
+        path.attr({
+            'stroke-width': 15,
+            'stroke-linejoin': 'round',
+            'stroke': '#555'
+        });
+
+        // Closed path
+        var path = paper.path([
+            'M', 375, 15,
+            'l', sideLength, 0,
+            x, y,
+            -x, y,
+            -sideLength, 0,
+            -x, -y,
+            'z'
+        ]);
+        path.attr({
+            'stroke-width': 15,
+            'stroke-linejoin': 'round'
+        });
+
+
+    </script>
+</body>
+</html>
+

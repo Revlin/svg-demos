@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Drag and Drop 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 800px;
+            height: 400px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Drag and Drop 02</h1>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 800, 400, function() {
+            var paper = this;
+
+            var target = paper.rect(400, 100, 200, 200).attr('fill', '#ddd');
+            var square = paper.rect(100, 100, 100, 100).attr('fill', '#000');
+
+            var startX, startY;
+
+            function onstart() {
+                startX = this.attr('x');
+                startY = this.attr('y');
+
+                this.attr('fill', 'pink');
+            }
+
+            function onend() {
+                var bBox = this.getBBox(),
+                    targetBBox = target.getBBox();
+
+                if(Raphael.isBBoxIntersect(bBox, targetBBox)) {
+                    this.undrag();
+                    this.attr({
+                        x: 450,
+                        y: 150
+                    });
+                }
+            }
+
+            function onmove(dx, dy) {
+                this.attr({
+                    x: startX + dx,
+                    y: startY + dy
+                });
+            }
+
+            square.drag(onmove, onstart, onend);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>getPointAtLength</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 800px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>getPointAtLength</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 400, 800); 
+
+        var pin = paper.path([
+            'M', 130, 350,
+            'A', 100, 180, 0, 1, 0, 210, 350,
+            'C', 290, 100, 50, 100, 130, 350,
+            'z'
+        ]).attr({
+            'stroke-width': 5,
+        });
+
+        var totalLength = pin.getTotalLength(),
+            point1 = pin.getPointAtLength(totalLength / 8),
+            point2 = pin.getPointAtLength(totalLength / 2);
+
+        paper.circle(point1.x, point1.y, 10).attr({fill: '#09c'});
+        paper.circle(point2.x, point2.y, 10).attr({fill: '#90c'});
+
+
+        // =====================================================
+        // Show gradient line at point on map
+        // =====================================================
+        var point1Angle = point1.alpha;
+        var line = paper.path(['M', point1.x - 100, point1.y, 'l', 200, 0]).transform(
+            ['r', point1Angle]
+        ).attr({'stroke-width': 5});
+
+        var point2Angle = point2.alpha;
+        var line2 = paper.path(['M', point2.x - 100, point2.y, 'l', 200, 0]).transform(
+            ['r', point2Angle]
+        ).attr({'stroke-width': 5});
+
+        // Identify angles
+        paper.path(['M', point1.x - 100, point1.y, 'l', 200, 0]).attr('stroke-dasharray', '- ');
+        paper.path(['M', point1.x + 40, point1.y, 'a', 50, 50, 0, 0, 1, -20, 30]).attr({
+            'arrow-end': 'classic-medium-medium',
+            'stroke-width': '5'
+        });
+
+        paper.path(['M', point2.x - 100, point2.y, 'l', 200, 0]).attr('stroke-dasharray', '- ');
+        paper.path(['M', point2.x + 40, point2.y, 'a', 50, 50, 0, 0, 1, -20, 30]).attr({
+            'arrow-end': 'classic-medium-medium',
+            'stroke-width': '5'
+        });
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Quadratic Bezier - the T command</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 800px;
+            height: 330px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Quadratic Bezier - the T command</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 800, 400); 
+
+        // Reflection Lines
+        paper.path('M 50,150 750,150').attr({'stroke-dasharray':'- ', stroke: '#666'});
+        paper.path('m 275,280 0,-130').attr({'stroke-dasharray':'- ', stroke: '#666'});
+        paper.path('m 525,20 0,130').attr({'stroke-dasharray':'- ', stroke: '#666'});
+        paper.path('M 525,20 275,280').attr({'stroke-dasharray':'- ', stroke: '#666'});
+    
+        // Our Path
+        paper.path([
+            'M', 50, 150, 
+            'Q', 525, 20, 400, 150,
+            'T', 750, 150
+        ]);
+
+        // Draw the points to be clear
+        var points = paper.set(
+            paper.circle(50, 150, 5),
+            paper.circle(525, 20, 5),
+            paper.circle(400, 150, 5),
+            paper.circle(750, 150, 5)
+        ).attr({fill: '#09c', 'stroke-width':0});
+        paper.circle(275, 280, 5).attr({fill:'#000','stroke-width': 0});
+    </script>
+</body>
+</html>
+

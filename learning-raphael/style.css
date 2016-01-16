@@ -1,0 +1,36 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    background: #fff;
+    color: #222;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5 {
+    
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.canvas {
+    background: url('graphy.png') top left repeat;
+    border: 2px dashed #000;
+}
+
+ol {
+
+}

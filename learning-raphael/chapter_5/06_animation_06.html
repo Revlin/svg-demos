@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 06</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 270px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 06</h1>
+    <p>Linear vs custom easing. Both animations elapse over the same time period but have different easing.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+            var paper = Raphael('my-canvas', 600, 300);
+            var circle = paper.circle(100, 75, 50).attr({fill: '#09c'});
+            var circle2 = paper.circle(100, 200, 50).attr({fill: '#c09'});
+            circle.animate({
+                cx: 450
+            }, 1000, "cubic-bezier(0.10,0.97,0.08,0.03)");
+
+            circle2.animate({
+                cx: 450
+            }, 1000, 'linear');
+
+    </script>
+</body>
+</html>
+

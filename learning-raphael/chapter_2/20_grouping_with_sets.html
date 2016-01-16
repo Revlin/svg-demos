@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Grouping with Sets</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 540px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grouping with Sets</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 540, 200); 
+
+        var circle = paper.circle(100, 100, 80);
+        var rect = paper.rect(205, 40, 120, 120);
+        var ellipse = paper.ellipse(430, 100, 80, 60);
+
+        var group = paper.set();
+        group.push(circle, rect, ellipse);
+
+        group.attr({
+            fill: '180-#09c-#fff:30-#f00',
+            stroke: '#000',
+            'stroke-width': 5
+        });
+    </script>
+</body>
+</html>
+

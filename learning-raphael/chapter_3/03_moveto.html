@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>moveto 01</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1><em>moveto</em> 01</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        // Move to, a single line
+        var paper = Raphael('my-canvas', 600, 200); 
+        var path = paper.path(
+            [
+                'M', 50, 50, 100, 150
+            ]
+        );
+
+        // A triangle using absolute co-ordinates
+        var path2 = paper.path(
+            [
+                'M', 250, 50, 
+                200, 100, 
+                300, 100,
+                250, 50
+            ]
+        );
+        path2.attr({
+            fill: '#a9c',
+            'stroke-width': 3
+        });
+
+        // A triangle using relative co-ordinates
+        var path2 = paper.path(
+            [
+                'm', 400, 20, 
+                100, 0, 
+                -50, 150,
+                -50, -150
+            ]
+        );
+        path2.attr({
+            fill: '#990',
+            'stroke-width': 3
+        });
+    </script>
+</body>
+</html>
+

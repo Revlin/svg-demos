@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Transformation Matrices 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Transformation Matrices 02</h1>
+	<h2>Scaling</h2>
+	<p>When <em>b = c = e = f = 0</em>, the transformation matrix is known as a scaling matrix</p>
+	<pre>
+1.5 0 0
+0 1.25 0
+0 0 1</pre>
+	<p>has the effect of scaling the points on an element by a factor of 1.5 in x and a factor of 1.25 in y. 
+	You can see this when clicking on the circle below.</p>
+	
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 400, 200, function() {
+            var paper = this;
+
+            var circle = paper.circle(200, 100, 30).attr('fill', '#09c');
+            var clickHandler = function() {
+                this.transform('M 1.5 0 0 1.25 0 0');
+            };
+            circle.click(clickHandler);
+        });
+
+    </script>
+</body>
+</html>
+

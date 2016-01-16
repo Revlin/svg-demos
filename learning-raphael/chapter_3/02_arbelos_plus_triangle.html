@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Arbelos Plus Triangle</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Arbelos Plus Triangle</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+        var arbelos = paper.path(
+            [
+                'M', 100, 180, 
+                'a', 140, 140, 0, 0, 1, 280, 0, 
+                 90, 90, 0, 0, 0, -180, 0,
+                 50, 50, 0, 0, 0, -100, 0,
+                'M', 250, 120,
+                'l', 30, 0, 
+                50, 0,
+                0, 50,
+                'z'
+            ]
+        );
+        arbelos.attr({
+            fill: '180-#fff-#000:50'
+        });
+    </script>
+</body>
+</html>
+

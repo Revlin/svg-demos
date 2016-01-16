@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Unregistering Event Handlers</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Unregistering Event Handlers</h1>
+    <p>Double clicking the circle unregisters the click event handler on the square.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 400, 200, function() {
+            var paper = this;
+
+            // Rotating square
+            var square = paper.rect(50, 50, 100, 100).attr('fill', '#09c');
+            var clickHandler = function() {
+                this.transform('...r 15');
+            };
+            square.click(clickHandler);
+
+            // Unregister square click handler when circle is double clicked
+            var circle = paper.circle(300, 100, 25).attr('fill', '#99c');
+            circle.dblclick(function() {
+                square.unclick(clickHandler);
+                square.attr({opacity: 0.5});
+                this.attr({fill: '#f04'});
+            });
+        });
+
+    </script>
+</body>
+</html>
+

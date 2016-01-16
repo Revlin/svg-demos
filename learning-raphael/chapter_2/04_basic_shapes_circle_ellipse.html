@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Circles and Ellipses</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 600px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Circles and Ellipses</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 200); 
+
+        var circle = paper.circle(100, 100, 50);
+        var ellipse = paper.ellipse(300, 100, 100, 50);
+        var ellipse = paper.ellipse(500, 100, 50, 50);
+    </script>
+</body>
+</html>
+

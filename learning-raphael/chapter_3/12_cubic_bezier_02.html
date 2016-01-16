@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Cubic Bezier 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 800px;
+            height: 300px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Cubic Bezier 02</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 800, 400); 
+
+        // Symmetry Lines
+        paper.path(
+            'M 0,60, l 400,120'
+        ).attr({'stroke-dasharray': '- '}).transform('t 250 0');
+    
+        // Our Path
+        paper.path([
+            'M', 200, 20, 
+            'C', 400, 140, 400, 180, 200, 120,
+            'S', 0, 100, 200, 220,
+            'z'
+        ]).attr({fill: '#222', transform: 't 250 0'});
+
+        // Control points 
+        var set = paper.set(
+            paper.circle(200, 20, 5),
+            paper.circle(200, 120, 5),
+            paper.circle(400, 140, 5),
+            paper.circle(400, 180, 5),
+            paper.circle(200, 220, 5),
+            paper.circle(0, 60, 5),
+            paper.circle(0, 100, 5)
+        ).attr({fill: '#09c', 'stroke-width': 0, transform: 't 250 0'});
+
+    </script>
+</body>
+</html>
+

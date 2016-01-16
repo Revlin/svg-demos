@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Radial Gradients 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Radial Gradients 02</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 200, 200); 
+
+        var circle = paper.circle(100, 100, 80);
+        circle.attr({
+            'stroke-width': 0,
+            fill: 'r#fff-#f00-#00f:90-#000'
+        });
+
+
+    </script>
+</body>
+</html>
+

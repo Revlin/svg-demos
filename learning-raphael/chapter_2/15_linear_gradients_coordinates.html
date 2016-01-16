@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Linear Gradients Co-ordinates</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <meta charset="utf8" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 380px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linear Gradients Co-ordinates</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 380, 200); 
+
+        var rect = paper.rect(20, 20, 160, 160);
+        rect.attr({
+            'stroke-width': 0,
+            fill: '45-#09c-#fff'
+        });
+
+        // Demonstration circle
+        var circle = paper.circle(280, 100, 80, 80).attr({
+            'stroke-dasharray': '- ',
+            fill: '45-#09c-#fff',
+            'fill-opacity': 0.2
+        }); 
+
+        // Mark angle subtended area
+        var segment = paper.path(
+            ['M', 360, 100, 'l', -80, 0, 'l', 57, -57]
+        ).attr({
+            'arrow-end':'open-wide-long'   
+        });
+
+        // Defines an angle curve
+        var angle = paper.path(
+            ['M', 310, 100, 'A', 30, 30, 0, 0, 0, 301, 79]
+        ).attr({
+            'arrow-end': 'open-wide-long'    
+        });
+
+        // 45 degrees text
+        paper.text(330, 80, '45°').attr({
+            'font-size': 12,
+            'font-family': 'monospace'
+        });
+
+    </script>
+</body>
+</html>
+

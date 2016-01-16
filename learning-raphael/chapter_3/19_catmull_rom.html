@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Catmull-Rom Curves</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 450px;
+            height: 300px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Catmull-Rom Curves</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 450, 500); 
+
+        var data = [
+            {x: 50, y: 250},
+            {x: 100, y: 100},
+            {x: 150, y: 150},
+            {x: 200, y: 140},
+            {x: 250, y: 250},
+            {x: 300, y: 200},
+            {x: 350, y: 180},
+            {x: 400, y: 230}
+        ];
+
+        // Draw Catmull-Rom curve by building a path array
+        var path = ['M', data[0].x, data[0].y];
+        path.push('R'); // The R command for Catmull-Rom
+        for(var i = 1, num = data.length; i < num; i+=1) {
+            path.push(data[i].x);
+            path.push(data[i].y);
+        }
+        var curve = paper.path( path );
+
+        // Plot data points
+        var plottedPoints = paper.set();
+        for(var i = 0, num = data.length; i < num; i+=1) {
+            var point = data[i];
+            plottedPoints.push(paper.circle(point.x, point.y, 5));
+        };
+        plottedPoints.attr({fill: '#09c', 'stroke-width':0});
+
+    </script>
+</body>
+</html>
+

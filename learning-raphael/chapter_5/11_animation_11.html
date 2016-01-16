@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 11</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 500px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 11</h1>
+    <p>Animation along a path. Note that single-clicking on the circle pauses the
+        animation while double-clicking on the circle resumes it.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 300);
+
+        var path = paper.path(
+            ['M', 100, 100, 
+             'C', 100, 0, 400, 200, 400, 100,
+             'S', 100, 200, 100, 100,
+             'z'
+             ]
+        ).attr({'stroke-width': 2});
+        var circle = paper.circle(0, 0, 13).attr({fill: '#09c', cursor: 'pointer'});
+
+        var pathLength = path.getTotalLength();
+        paper.customAttributes.pathFactor = function(distance) {
+            var point = path.getPointAtLength(distance * pathLength);
+            var dx = point.x,
+                dy = point.y;
+            return {
+                transform: ['T', dx, dy]
+            };
+        };
+
+        circle.attr({pathFactor: 0});
+
+        function runloop() {
+            circle.animate({pathFactor: 1}, 4000, function() {
+                this.attr({pathFactor: 0}); // Reset
+                setTimeout(runloop);
+            });
+            circle.unclick().click(function() {
+                this.pause();
+            });
+            circle.undblclick().dblclick(function() {
+                this.resume();
+            });
+        };
+        runloop();
+    </script>
+</body>
+</html>
+

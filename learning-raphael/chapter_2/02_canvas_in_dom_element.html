@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Creating the canvas</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas svg {
+            background: blue;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>The embedded canvas</h1>
+    <p>It's common to draw vector graphics into a DOM element.</p>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 500, 300); 
+    </script>
+</body>
+</html>
+

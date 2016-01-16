@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Linear Gradients 02</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 380px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Linear Gradients 02</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 380, 200); 
+
+        var rect = paper.rect(20, 20, 160, 160);
+        rect.attr({
+            'stroke-width': 0,
+            fill: '0-#00a9e0-#323490:20-#ea1688:40-#eb2e2e:60-#fde92d:80-#009e54'
+        });
+
+
+    </script>
+</body>
+</html>
+

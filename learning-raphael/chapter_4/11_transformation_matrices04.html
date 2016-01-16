@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Transformation Matrices 04</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Transformation Matrices 04 (Rotation)</h1>
+    <p>Rotation about the origin, single- / double-click to initalise / remove event handlers.</p>
+	<p>Note that the rotation of the line and square is about the point (0, 0).</p>
+	<p>You can find out more about rotation using affine transformations at 
+	<a target="_blank" href="http://en.wikipedia.org/wiki/Transformation_matrix#Affine_transformations"
+	>http://en.wikipedia.org/wiki/Transformation_matrix#Affine_transformations</a>.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 400, 200, function() {
+            var paper = this;
+
+            // Rotating square
+            var square = paper.rect(150, 20, 100, 100).attr('fill', '#09c');
+            var line = paper.path(['M', 0, 0, 'L', 150, 70]).attr({
+                'stroke-width': 4,
+                'stroke-linecap': 'round'
+            });
+
+            var rotation = 15;
+            square.click(function() {
+                var t = [
+                    'm', 
+                    Math.cos(Raphael.rad(rotation)),
+                    Math.sin(Raphael.rad(rotation)),
+                    -Math.sin(Raphael.rad(rotation)),
+                    Math.cos(Raphael.rad(rotation)),
+                    0, 
+                    0
+                ];
+                this.transform(t);
+                line.transform(t);
+            });
+
+            // Reset transformations
+            square.dblclick(function() {
+                this.transform('');
+                line.transform('');
+            });
+        });
+    </script>
+</body>
+</html>
+

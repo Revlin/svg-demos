@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>getTotalLength</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 800px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>getTotalLength</h1>
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 400, 800); 
+
+        var pin = paper.path([
+            'M', 130, 350,
+            'A', 100, 180, 0, 1, 0, 210, 350,
+            'C', 290, 100, 50, 100, 130, 350,
+            'z'
+        ]).attr({
+            'stroke-width': 5,
+        });
+
+        var totalLength = pin.getTotalLength();
+        paper.text(180, 50, 'Total Length: ' + totalLength.toFixed(2)).attr('font-size', 33);
+
+    </script>
+</body>
+</html>
+

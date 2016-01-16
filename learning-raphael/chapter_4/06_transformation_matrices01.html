@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Transformation Matrices 01</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 400px;
+            height: 400px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Transformation Matrices 01</h1>
+	<h2>Translation</h2>
+	<p>The translation matrix is given for <em>a = 1, b = 0, c = 0 and d = 1</em> and <em>e</em> and <em>f</em> vary.</p>
+	<p>The following translation occurs when the square is clicked and represents translation of 50px in x and 100px  in y:</p>
+	<pre>
+1 0 50
+0 1 100
+0 0 1
+	</pre>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('my-canvas', 400, 400, function() {
+            var paper = this;
+
+            
+            var square = paper.rect(50, 50, 100, 100).attr('fill', '#09c');
+            var clickHandler = function() {
+                // 1 0 50
+                // 0 1 100
+                // 0 0 1
+                var m = Raphael.matrix(1, 0, 0, 1, 50, 100);
+                var t = m.toTransformString();
+                this.transform(t);
+            };
+            square.click(clickHandler);
+        });
+
+    </script>
+</body>
+</html>
+

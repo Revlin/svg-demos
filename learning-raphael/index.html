@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Creating the canvas</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+        body {
+            font-size: 15px;
+        }
+		.smaller {
+			font-size: 11px;
+		}
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Raphael JS Vector Graphics Demos</h1>
+    <p>These demos are also available online at <a href="http://raphaeljsvectorgraphics.com">raphaeljsvectorgraphics.com</a></p>
+    <!-- Available Demos -->
+    <h2>Chapter 2</h2>
+    <ol class="demos">
+        <li><a href="chapter_2/01_canvas_relative_to_viewport.html">Canvas Relative to Viewport</a></li>
+        <li><a href="chapter_2/02_canvas_in_dom_element.html">Canvas in DOM element</a></li>
+        <li><a href="chapter_2/03_basic_shapes_rectangles.html">Basic Shapes - Rectangles</a></li>
+        <li><a href="chapter_2/04_basic_shapes_circle_ellipse.html">Basic Shapes - Circles and Ellipses</a></li>
+        <li><a href="chapter_2/05_embedding_images.html">Embedding Images</a></li>
+        <li><a href="chapter_2/06_basic_fills.html">Basic Fills</a></li>
+        <li><a href="chapter_2/07_image_fills.html">Image Fills</a></li>
+        <li><a href="chapter_2/08_stroke_and_widths.html">Strokes</a></li>
+        <li><a href="chapter_2/09_stroke_dasharray.html">Stroke Dasharray</a></li>
+        <li><a href="chapter_2/10_stroke_linejoin.html">Stroke Linejoin</a></li>
+        <li><a href="chapter_2/11_href.html">Href</a></li>
+        <li><a href="chapter_2/12_clip_rect.html">Clip-Rect</a></li>
+        <li><a href="chapter_2/13_clip_rect_image.html">Clip-Rect Image</a></li>
+        <li><a href="chapter_2/14_linear_gradients_01.html">Linear Gradients 01</a></li>
+        <li><a href="chapter_2/15_linear_gradients_coordinates.html">Linear Gradients Co-Ordinates</a></li>
+        <li><a href="chapter_2/16_linear_gradients_02.html">Linear Gradients 02</a></li>
+        <li><a href="chapter_2/17_radial_gradients_01.html">Radial Gradients 01</a></li>
+        <li><a href="chapter_2/18_radial_gradients_02.html">Radial Gradients 02</a></li>
+        <li><a href="chapter_2/19_radial_gradients_focal_points.html">Radial Gradients - Focal Points</a></li>
+        <li><a href="chapter_2/20_grouping_with_sets.html">Grouping with Sets</a></li>
+        <li><a href="chapter_2/21_text.html">Text</a></li>
+        <li><a href="chapter_2/22_custom_fonts.html">Custom Fonts</a></li>
+    </ol>
+
+    <h2>Chapter 3</h2>
+    <ol class="demos">
+        <li><a href="chapter_3/01_arbelos.html">Arbelos</a></li>
+        <li><a href="chapter_3/02_arbelos_plus_triangle.html">Arbelos Plus Triangle</a></li>
+        <li><a href="chapter_3/03_moveto.html">Moveto</a></li>
+        <li><a href="chapter_3/04_lineto_hexagon.html">Lineto Hexagon</a></li>
+        <li><a href="chapter_3/05_closepath.html">Closepath</a></li>
+        <li><a href="chapter_3/06_quadratic_bezier.html">Quadratic Bezier Curves 01</a></li>
+        <li><a href="chapter_3/07_quadratic_bezier_02.html">Quadratic Bezier Curves 02</a></li>
+        <li><a href="chapter_3/08_quadratic_bezier_03.html">Quadratic Bezier Curves 03</a></li>
+        <li><a href="chapter_3/09_quadratic_bezier_04.html">Quadratic Bezier Curves 04</a></li>
+        <li><a href="chapter_3/10_quadratic_bezier_05.html">Quadratic Bezier Curves 05</a></li>
+        <li><a href="chapter_3/11_cubic_bezier_01.html">Cubic Bezier 01</a></li>
+        <li><a href="chapter_3/12_cubic_bezier_02.html">Cubic Bezier 02</a></li>
+        <li><a href="chapter_3/13_arcs_01.html">Arcs 01</a></li>
+        <li><a href="chapter_3/14_arcs_02.html">Arcs 02</a></li>
+        <li><a href="chapter_3/15_arcs_03.html">Arcs 03</a></li>
+        <li><a href="chapter_3/16_get_total_length.html">Get Total Length</a></li>
+        <li><a href="chapter_3/17_get_point_at_length.html">Get Point at Length</a></li>
+        <li><a href="chapter_3/18_get_subpath.html">Get Subpath</a></li>
+        <li><a href="chapter_3/19_catmull_rom.html">Catmull-Rom Curves</a></li>
+    </ol>
+
+    <h2>Chapter 4</h2>
+    <ol class="demos">
+        <li><a href="chapter_4/01_basic_transformations.html">Basic Transformations</a></li>
+        <li><a href="chapter_4/02_basic_event_handling.html">Basic Event Handling</a></li>
+        <li><a href="chapter_4/03_transformation_ellipsis.html">Transformation Ellipsis</a></li>
+        <li><a href="chapter_4/04_unregistering_event_handlers.html">Unregistering Event Handlers</a></li>
+        <li><a href="chapter_4/05_multiple_event_handlers.html">Multiple Event Handlers</a></li>
+		<li><a href="chapter_4/12_events_library.html">Events Library 01</a> *</li>
+        <li><a href="chapter_4/13_events_library02.html">Events Library 02</a> *</li>
+        <li><a href="chapter_4/14_drag_drop_01.html">Drag and Drop 01</a></li>
+        <li><a href="chapter_4/15_drag_drop_02.html">Drag and Drop 02</a></li>
+        <li><a href="chapter_4/16_drag_drop_03.html">Drag and Drop 03</a></li>
+	</ol>
+	<p class="smaller">* Note that the events library is not covered in the book but examples are contained 
+		here should you wish to see it in action. For more information see
+		<a href="http://raphaeljs.com/reference.html#eve">http://raphaeljs.com/reference.html#eve</a></p>
+		
+	<h3>Matrix Transformations</h3>
+	<!-- Matrix transformations are given as supplmentary material -->
+	
+	<p>In the book we cover <em>shear</em> transformations using matrices. The following demos cover a range of 
+		transformations using the matrix form and are included as additional material.</p>
+	<ol class="demos">
+        <li><a href="chapter_4/06_transformation_matrices01.html">Transformation Matrices 01 [Translation]</a></li>
+        <li><a href="chapter_4/08_transformation_matrices02.html">Transformation Matrices 02 [Scaling]</a></li>
+        <li><a href="chapter_4/09_transformation_matrices03.html">Transformation Matrices 03 [Shear]</a></li>
+        <li><a href="chapter_4/11_transformation_matrices04.html">Transformation Matrices 04 [Rotation]</a></li>
+	</ol>
+
+    <h2>Chapter 5</h2>
+    <ol class="demos">
+        <li><a href="chapter_5/01_animation_01.html">Animation 01 - Basic Animation</a></li>
+        <li><a href="chapter_5/02_animation_02.html">Animation 02 - Basic Animation</a></li>
+        <li><a href="chapter_5/03_animation_03.html">Animation 03 - Path Animation</a></li>
+        <li><a href="chapter_5/04_animation_04.html">Animation 04 - Catmull-Rom Cuve Animation</a></li>
+        <li><a href="chapter_5/05_animation_05.html">Animation 05 - Bounce Easing</a></li>
+        <li><a href="chapter_5/06_animation_06.html">Animation 06 - Custom Easing</a></li>
+        <li><a href="chapter_5/07_animation_07.html">Animation 07 - Consecutive Rotations</a></li>
+        <li><a href="chapter_5/08_animation_08.html">Animation 08 - Consecutive Shears</a></li>
+        <li><a href="chapter_5/09_animation_09.html">Animation 09 - Custom Attributes</a></li>
+        <li><a href="chapter_5/10_animation_10.html">Animation 10 - Custom Attributes Animated</a></li>
+        <li><a href="chapter_5/11_animation_11.html">Animation 11 - Animation along a path with pause and resume</a></li>
+    </ol>
+
+    <h2>Chapter 6</h2>
+    <ol class="demos">
+        <li><a href="chapter_6/01_existing_svgs_01.html">Existing SVGs - Animating a gobbler</a></li>
+        <li><a href="chapter_6/02_existing_svgs_02.html">Existing SVGs - Introducing a penguin</a></li>
+        <li><a href="chapter_6/03_existing_svgs_03.html">Existing SVGs - Choropleth Maps</a></li>
+    </ol>
+
+    <h2>Chapter 7</h2>
+    <ol class="demos">
+        <li><a href="chapter_7/01_social_network_usage.html">Social Network Usage</a></li>
+        <li><a href="chapter_7/02_tweets_by_time.html">Tweets by Time</a></li>
+        
+    </ol>
+	<h3>Supplementary Material</h3>
+	<ol>
+		<li><a href="chapter_7/03_facebook_usage_by_year.html">Facebook Usage by Year</a></li>
+		<li><a href="chapter_7/04_golden_tweets.html">Golden Tweets</a></li>
+	</ol>
+	
+
+
+</body>
+</html>
+

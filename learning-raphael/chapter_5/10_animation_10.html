@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Animation 10 - Custom Attributes with Animation</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 570px;
+            height: 270px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Animation 10 - Custom Attributes with Animation</h1>
+    <p>Previous example animated into existence on page load.</p>
+    <div id="my-canvas" class="canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 600, 300);
+        var data = [
+            {
+                name: 'Taiwan',
+                population: 0.1,
+                density: 1
+            },
+            {
+                name: 'South Korea',
+                population: 0.32,
+                density: 0.5
+            },
+            {
+                name: 'Netherlands',
+                population: 0.05,
+                density: 0.22
+            },
+            {
+                name: 'Belgium',
+                population: 0,
+                density: 0.07
+            },
+            {
+                name: 'Japan',
+                population: 1,
+                density: 0
+            }
+        ];
+
+        paper.customAttributes.popDensity = function(population, density) {
+            var radius = 25 + (25 * population),
+                fillColor = 'hsb(0,0,' + (1 - density) + ')';
+
+            return {
+                fill: fillColor,
+                r: radius
+            };
+        };
+
+        var currentX = 70;
+        for(var i = 0, ii = data.length; i < ii; i+=1) {
+            var country = data[i];
+            var circle = paper.circle(currentX, 150, 50).attr({
+                popDensity: [0, 0],
+                'stroke-width': 4
+            });
+
+            circle.animate({
+                popDensity: [country.population, country.density]
+            }, 1000, 'easeOut');
+
+            paper.text(currentX, 225, country.name).attr({'font-size': 14});
+
+            currentX += 100;
+        }
+
+    </script>
+</body>
+</html>
+

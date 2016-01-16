@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Rectangular Clipping</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clip-rect</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 200, 200); 
+
+        var img = paper.image('stella.jpg', 0, 0, 144, 192);
+        img.attr({
+            'clip-rect': '90 40 40 40'
+        });
+
+        // We have not covered animation yet but the clip-rect property can be animated
+        img.animate({
+            'clip-rect': '20 40 124, 75'
+        }, 4000);
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Image Fills</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Fills</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        // The pattern image used here comes courtesy of:
+        // http://luthienblack.deviantart.com/art/Green-Patterns-35866483
+
+        var paper = Raphael('my-canvas', 200, 200); 
+
+        var circle = paper.circle(100, 100, 80);
+        circle.attr({
+            fill: 'url(bg_pattern.png)',
+        });
+
+    </script>
+</body>
+</html>
+

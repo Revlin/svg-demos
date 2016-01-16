@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Custom Fonts</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <script type="text/javascript" src="Pacifico_400.font.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 540px;
+            height: 110px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Fonts</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 540, 110); 
+        var text = paper.print(50, 50, "Vi veri veniversum vivus vici.", paper.getFont('Pacifico'), 38);
+        text.attr({
+            fill: '315-#000-#666',
+            'stroke-width': 0
+        });
+    </script>
+</body>
+</html>
+

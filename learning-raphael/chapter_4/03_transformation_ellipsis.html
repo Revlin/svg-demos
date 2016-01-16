@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Transformation Ellipsis</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <style type="text/css">
+        .canvas {
+            background: url('graphy.png') top left repeat;
+            width: 800px;
+            height: 300px;
+            border: 2px dashed #000;
+        }
+    </style>
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+</head>
+<body>
+    <h1>Transformation Ellipsis</h1>
+    <div id="translation" class="canvas"></div>
+
+    <script type="text/javascript">
+        Raphael('translation', 800, 300, function() {
+            var paper = this;
+
+            // Draw a Salinon
+            var salinon = paper.path([
+                'M', 100, 200, 
+                'a', 150, 150, 0, 0, 1, 300, 0,
+                50, 50, 0, 0, 0, -100, 0,
+                50, 50, 0, 0, 1, -100, 0,
+                50, 50, 0, 0, 0, -100, 0
+            ]);
+            salinon.attr({
+                fill: '#09c',
+                'stroke-width': 5
+            });
+
+            // Ellipsis defines subsequent translation and rotation
+            salinon.click(function() {
+                this.transform('t 300 0 R 180')
+            });
+            salinon.dblclick(function() {
+                this.transform('...t 200 0 r 45')
+            });
+        });
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>                         
+<head>
+    <title>Drawing Rectangles</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="raphael-2.1.0-min.js"></script>
+    <style type="text/css">
+        #my-canvas {
+            background: url('graphy.png') top left repeat;
+            width: 500px;
+            height: 300px;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drawing Rectangles</h1>
+
+    <div id="my-canvas"></div>
+
+    <script type="text/javascript">
+        var paper = Raphael('my-canvas', 500, 300); 
+
+        var rectangle = paper.rect(200, 150, 50, 100);
+        var square = paper.rect(300, 150, 75, 75, 15);
+    </script>
+</body>
+</html>
+
