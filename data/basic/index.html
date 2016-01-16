@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head>
+    <title>svg-demos/basic</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    
+    <style type="text/css">
+        svg {
+            background: #000; /* To Identify the created canvas */
+        }
+    </style>
+    
+    <style type="text/css">
+        * {
+          stroke: #000;
+          stroke-opacity: 0.5;
+          fill:none;
+          fill-opacity: 1.0;
+        }
+
+        line {
+          stroke-width: 2;
+        }
+
+        rect {
+          fill: #F90;
+        }
+
+        rect + rect {
+          fill: none;
+        }
+
+        rect + rect + rect {
+          stroke-width: 10;
+        }
+
+        circle {
+          fill: #00F;
+        }
+
+        ellipse {
+          fill-opacity: 0.5;
+          fill: #0F0;
+        }
+
+        ellipse + ellipse {
+          fill-opacity: 1.0;
+          fill: #0FF;
+        }
+
+        polygon {
+          fill: #F00;
+        }
+    </style>
+    
+    <script type="text/javascript" src="/data/libs/raphael/raphael-min.js"></script>
+</head>
+
+<body>
+    <h1>svg-demos/basic</h1>
+    
+    <p>Alpha</p>
+    <div id="alpha"></div>
+    <script type="text/javascript" src="alpha.js"></script>
+    
+    <p>Beta</p>
+    <div id="beta"></div>
+    <script type="text/javascript" src="beta.js"></script>
+</body></html>
