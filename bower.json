@@ -26,6 +26,7 @@
   ],
   "dependencies": {
     "angular": "https://github.com/Real-Currents/angular.git#real/currents",
-    "raphael": "https://github.com/Real-Currents/raphael.git#real/currents"
+    "raphael": "https://github.com/Real-Currents/raphael.git#real/currents",
+    "snap.svg": "https://github.com/Real-Currents/snapr.git#real/currents"
   }
 }
