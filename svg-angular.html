@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SVG AngularJS</title>
 	
-	<script type="text/ecmascript" src="data/libs/angular/dist/angular.js"></script>
+	<script type="text/ecmascript" src="data/libs/angular/angular.js"></script>
 	<script type="text/ecmascript" src="data/scripts/Debugger.js"></script>
 	<script type="text/ecmascript" src="data/scripts/practice.js"></script>
 	<script type="text/ecmascript">	
@@ -41,7 +41,9 @@
 	
 	<p>Circle Radius: <input type="range" min="1" max="101" data-ng-model="rad"  /></p>
 	
-	<svg width="640" height="360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<svg width="640" height="360" 
+         xmlns="http://www.w3.org/2000/svg" 
+         xmlns:xlink="http://www.w3.org/1999/xlink">
 		<style type="text/css">
 			text.title {
 				fill:		#000;
@@ -52,17 +54,15 @@
 			}
 		</style>
 		<defs>
-			<font-face font-family="raleway">
-				  <font-face-src>
-						<font-face-uri
-						   xlink:href="data/fonts/font-raleway-semibold.svg#ralewaysemibold" />
-				  </font-face-src>
-			</font-face>
+			<font-face font-family="raleway"><font-face-src>
+				<font-face-uri 
+                  xlink:href="data/fonts/font-raleway-semibold.svg#ralewaysemibold" />
+            </font-face-src></font-face>
 		</defs>
 
-		<g data-ng-init="name = 'World'; rad=50">
+		<g data-ng-init="name='World'; rad=50">
 
-			<circle cx="480" cy="90" r="{{rad}}" />
+			<circle cx="480" cy="90" r="50" data-r="{{rad}}" />
 
 			<g class="custom-circle"></g>
 

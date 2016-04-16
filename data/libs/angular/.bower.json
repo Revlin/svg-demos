@@ -1,18 +1,18 @@
 {
-  "name": "AngularJS",
-  "devDependencies": {
-    "jquery": "2.1.1",
-    "closure-compiler": "https://dl.google.com/closure-compiler/compiler-20140814.zip",
-    "ng-closure-runner": "https://raw.github.com/angular/ng-closure-runner/v0.2.3/assets/ng-closure-runner.zip"
-  },
-  "homepage": "https://github.com/Real-Currents/angular",
-  "_release": "a121ed8bf4",
+  "name": "angular",
+  "version": "1.5.4",
+  "license": "MIT",
+  "main": "./angular.js",
+  "ignore": [],
+  "dependencies": {},
+  "homepage": "https://github.com/angular/bower-angular",
+  "_release": "1.5.4",
   "_resolution": {
-    "type": "branch",
-    "branch": "real/currents",
-    "commit": "a121ed8bf469e145a166cde971d60baafe2df468"
+    "type": "version",
+    "tag": "v1.5.4",
+    "commit": "b972d5aa130bef5c4d931f22bd11627207ea35ca"
   },
-  "_source": "https://github.com/Real-Currents/angular.git",
-  "_target": "real/currents",
-  "_originalSource": "https://github.com/Real-Currents/angular.git"
+  "_source": "https://github.com/angular/bower-angular.git",
+  "_target": "=1.5.4",
+  "_originalSource": "angular"
 }

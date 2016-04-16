@@ -1,45 +1,64 @@
-AngularJS [![Build Status](https://travis-ci.org/angular/angular.js.svg?branch=master)](https://travis-ci.org/angular/angular.js)
-=========
+# packaged angular
 
-AngularJS lets you write client-side web applications as if you had a smarter browser.  It lets you
-use good old HTML (or HAML, Jade and friends!) as your template language and lets you extend HTML’s
-syntax to express your application’s components clearly and succinctly.  It automatically
-synchronizes data from your UI (view) with your JavaScript objects (model) through 2-way data
-binding. To help you structure your application better and make it easy to test, AngularJS teaches
-the browser how to do dependency injection and inversion of control.
+This repo is for distribution on `npm` and `bower`. The source for this module is in the
+[main AngularJS repo](https://github.com/angular/angular.js).
+Please file issues and pull requests against that repo.
 
-Oh yeah and it helps with server-side communication, taming async callbacks with promises and 
-deferreds. It also makes client-side navigation and deeplinking with hashbang urls or HTML5 pushState a
-piece of cake. The best of all: it makes development fun!
+## Install
 
-* Web site: http://angularjs.org
-* Tutorial: http://docs.angularjs.org/tutorial
-* API Docs: http://docs.angularjs.org/api
-* Developer Guide: http://docs.angularjs.org/guide
-* Contribution guidelines: [CONTRIBUTING.md](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md)
-* Dashboard: http://dashboard.angularjs.org
+You can install this package either with `npm` or with `bower`.
 
-Building AngularJS
----------
-[Once you have your environment setup](http://docs.angularjs.org/misc/contribute) just run:
+### npm
 
-    grunt package
+```shell
+npm install angular
+```
 
+Then add a `<script>` to your `index.html`:
 
-Running Tests
--------------
-To execute all unit tests, use:
+```html
+<script src="/node_modules/angular/angular.js"></script>
+```
 
-    grunt test:unit
+Or `require('angular')` from your code.
 
-To execute end-to-end (e2e) tests, use:
+### bower
 
-    grunt package
-    grunt test:e2e
+```shell
+bower install angular
+```
 
-To learn more about the grunt tasks, run `grunt --help` and also read our
-[contribution guidelines](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md).
+Then add a `<script>` to your `index.html`:
 
+```html
+<script src="/bower_components/angular/angular.js"></script>
+```
 
-[![Analytics](https://ga-beacon.appspot.com/UA-8594346-11/angular.js/README.md?pixel)](https://github.com/igrigorik/ga-beacon)
+## Documentation
 
+Documentation is available on the
+[AngularJS docs site](http://docs.angularjs.org/).
+
+## License
+
+The MIT License
+
+Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

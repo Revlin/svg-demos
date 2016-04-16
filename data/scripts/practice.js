@@ -20,82 +20,6 @@ try {
 } );
 
 
-practice.service( 'SubscriptionService', [
-	'$q',
-	function( $q ) {
-	try {
-		this.getUsers = function() {
-			/* Skip ajax call because data is already on the page;
-			 * resolve promise immediately
-			 */
-			var userList = [],
-				defer = $q.defer();
-			$('.user-list').each( function( idx ) {
-				var data = this.innerHTML.match(/^(.+\s.+)\s(.+)$/);
-				var user = {
-					name: (!!data)? data[1]: "No name",
-					email: (!!data)? data[2]: "No@Email",
-					id: (idx + 1),
-					isSubscriber: false
-				};
-				userList.push(user);
-			} );
-			defer.resolve( userList );
-			
-			return defer.promise;
-		};
-		
-		this.updateParticipants = function( users ) {
-			var defer = $q.defer();
-			defer.resolve();
-			return defer.promise;
-		};
-	} catch(e) {
-		Debugger.log( e.stack );
-	}
-	}
-] );
-practice.controller( 'selectSubscribersController', [
-	'$scope',
-	'SubscriptionService',
-	function( $scope, SubscriptionService ) {
-	try {
-		$scope.model = {};
-		
-		SubscriptionService.getUsers().then( function( users) {
-			Debugger.log( users );
-			$scope.model.users = users;
-		} );
-		
-		$scope.watchSubscribers = function( newValue, oldValue ) {
-			if( (newValue === oldValue) || (!newValue) ) return;
-			$scope.model.selected.isSubscriber = true;
-		};
-		
-		$scope.$watch('model.selected', $scope.watchSubscribers);
-		
-		$scope.removeSubscriber = function( subscriber ) {
-			subscriber.isSubscriber = false;
-			$scope.model.selected = null; // reset choice
-		}
-		
-		$scope.saveChanges = function() {
-			SubscriptionService.updateUsers($scope.model.users).then(
-				function() {
-					/* Handle save success */
-				},
-				function() {
-					/* Handle save failure */
-				}
-			)
-		}
-	} catch(e) {
-		Debugger.log( e.stack );
-	}
-	}
-] );
-
-
 practice.controller( 'typeBoxController', function($scope) {
 try {
 	$scope.MAX_LEN = 100;
@@ -176,29 +100,29 @@ try {
 }
 } );
 
-/**
- *  creates a circle in the upper left corner of its container
- *  with the given radius. `<custom-circle radius="10"/>`
- * (Adapted from https://gist.github.com/blesh/2a11d1b4d65006d6ade3#file-custom-circle-js)
- */
-practice.directive('customCircle', function(){
-  return {
-	restrict: 	'C',
-
-	// the following two configuration options are 
-	// required for SVG custom elements.
-	templateNamespace: 'svg',
-	replace: true, 
-
-	// NOTE: ng-attr- style binding is used to prevent SVG validation
-	// error messages.
-	template: '<circle data-ng-attr-cx="{{radius}}" data-ng-attr-cy="{{radius}}" data-ng-attr-r="{{radius}}"/>',
-
-	// everything else as normal
-	scope: {
-	  radius: '@',
-	}
-  };
-});
+///**
+// *  creates a circle in the upper left corner of its container
+// *  with the given radius. `<custom-circle radius="10"/>`
+// * (Adapted from https://gist.github.com/blesh/2a11d1b4d65006d6ade3#file-custom-circle-js)
+// */
+//practice.directive('customCircle', function(){
+//  return {
+//	restrict: 	'C',
+//
+//	// the following two configuration options are 
+//	// required for SVG custom elements.
+//	templateNamespace: 'svg',
+//	replace: true, 
+//
+//	// NOTE: ng-attr- style binding is used to prevent SVG validation
+//	// error messages.
+//	template: '<circle data-ng-attr-cx="{{radius}}" data-ng-attr-cy="{{radius}}" data-ng-attr-r="{{radius}}"/>',
+//
+//	// everything else as normal
+//	scope: {
+//	  radius: '@',
+//	}
+//  };
+//});
 
 1;
