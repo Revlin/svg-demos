@@ -1,18 +1,17 @@
 {
   "name": "angular",
-  "version": "1.5.4",
   "license": "MIT",
   "main": "./angular.js",
   "ignore": [],
   "dependencies": {},
-  "homepage": "https://github.com/angular/bower-angular",
-  "_release": "1.5.4",
+  "homepage": "https://github.com/Real-Currents/angular",
+  "_release": "40e4fcdcc0",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.5.4",
-    "commit": "b972d5aa130bef5c4d931f22bd11627207ea35ca"
+    "type": "branch",
+    "branch": "real/currents",
+    "commit": "40e4fcdcc005a04d7313f9c82aee30c8a6d72267"
   },
-  "_source": "https://github.com/angular/bower-angular.git",
-  "_target": "=1.5.4",
-  "_originalSource": "angular"
+  "_source": "https://github.com/Real-Currents/angular.git",
+  "_target": "real/currents",
+  "_originalSource": "https://github.com/Real-Currents/angular.git"
 }

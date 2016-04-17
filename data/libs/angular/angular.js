@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.5.4
+ * @license AngularJS v1.5.5-local+sha.05b6547
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -57,7 +57,7 @@ function minErr(module, ErrorConstructor) {
       return match;
     });
 
-    message += '\nhttp://errors.angularjs.org/1.5.4/' +
+    message += '\nhttp://errors.angularjs.org/1.5.5-local+sha.05b6547/' +
       (module ? module + '/' : '') + code;
 
     for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -2479,11 +2479,11 @@ function toDebugString(obj) {
  * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
  */
 var version = {
-  full: '1.5.4',    // all of these placeholder strings will be replaced by grunt's
+  full: '1.5.5-local+sha.05b6547',    // all of these placeholder strings will be replaced by grunt's
   major: 1,    // package task
   minor: 5,
-  dot: 4,
-  codeName: 'graduated-sophistry'
+  dot: 5,
+  codeName: 'snapshot'
 };
 
 
@@ -7627,6 +7627,9 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
    *      See {@link ng.$compile#-bindtocontroller- `bindToController`}.
    *    - `transclude` – `{boolean=}` – whether {@link $compile#transclusion content transclusion} is enabled.
    *      Disabled by default.
+   *    - `require` - `{Object<string, string>=}` - requires the controllers of other directives and binds them to
+   *      this component's controller. The object keys specify the property names under which the required
+   *      controllers (object values) will be bound. See {@link ng.$compile#-require- `require`}.
    *    - `$...` – additional properties to attach to the directive factory function and the controller
    *      constructor function. (This is used by the component router to annotate)
    *
@@ -10799,7 +10802,7 @@ function $HttpProvider() {
      * That means changes to the properties of `data` are not local to the transform function (since Javascript passes objects by reference).
      * For example, when calling `$http.get(url, $scope.myObject)`, modifications to the object's properties in a transformRequest
      * function will be reflected on the scope and in any templates where the object is data-bound.
-     * To prevent his, transform functions should have no side-effects.
+     * To prevent this, transform functions should have no side-effects.
      * If you need to modify properties, it is recommended to make a copy of the data, or create new object to return.
      * </div>
      *
@@ -19244,31 +19247,41 @@ var originUrl = urlResolve(window.location.href);
  *   | pathname      | The pathname, beginning with "/"
  *
  */
-function urlResolve(url) {
-  var href = url;
+function urlResolve(url, base) {
+	var href = url;
 
-  if (msie) {
-    // Normalize before parse.  Refer Implementation Notes on why this is
-    // done in two steps on IE.
-    urlParsingNode.setAttribute("href", href);
-    href = urlParsingNode.href;
-  }
+	if (msie) {
+	// Normalize before parse.  Refer Implementation Notes on why this is
+	// done in two steps on IE.
+		urlParsingNode.setAttribute("href", href);
+		href = urlParsingNode.href;
+	}
 
-  urlParsingNode.setAttribute('href', href);
+	urlParsingNode.setAttribute('href', href);
+	
+	/* REV EDIT:
+	 * Fix pathname parsing...
+	 */
+	if( href.match(/^https?:\/\/(?:[^:@\/]+(?::[^@\/]+)?@)?([\w|\-|\.]+)(?::\d+)?(?:\/.*)?$/) !== null ) {
+		var parts = href.match(/^https?:\/\/(?:[^:@\/]+(?::[^@\/]+)?@)?([\w|\-|\.]+)(?::\d+)?(\/.*)?$/);
+		urlParsingNode.host = parts[1];
+		urlParsingNode.pathname = parts[2];
+	}
+	/* END EDIT */
 
-  // urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
-  return {
-    href: urlParsingNode.href,
-    protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
-    host: urlParsingNode.host,
-    search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
-    hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
-    hostname: urlParsingNode.hostname,
-    port: urlParsingNode.port,
-    pathname: (urlParsingNode.pathname.charAt(0) === '/')
-      ? urlParsingNode.pathname
-      : '/' + urlParsingNode.pathname
-  };
+	// urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+	return {
+		href: urlParsingNode.href,
+		protocol: urlParsingNode.protocol ? urlParsingNode.protocol.replace(/:$/, '') : '',
+		host: urlParsingNode.host,
+		search: urlParsingNode.search ? urlParsingNode.search.replace(/^\?/, '') : '',
+		hash: urlParsingNode.hash ? urlParsingNode.hash.replace(/^#/, '') : '',
+		hostname: urlParsingNode.hostname,
+		port: urlParsingNode.port,
+		pathname: (urlParsingNode.pathname.charAt(0) === '/')
+		  ? urlParsingNode.pathname
+		  : '/' + urlParsingNode.pathname
+	};
 }
 
 /**
